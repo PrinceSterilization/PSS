@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PTSDataSet1" targetNamespace="http://tempuri.org/PTSDataSet1.xsd" xmlns:mstns="http://tempuri.org/PTSDataSet1.xsd" xmlns="http://tempuri.org/PTSDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PTSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PTSConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PSS.Properties.Settings.GlobalReference.Default.PTSConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_BIG_PICTURETableAdapter" GeneratorDataComponentClassName="vw_BIG_PICTURETableAdapter" Name="vw_BIG_PICTURE" UserDataComponentName="vw_BIG_PICTURETableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PTSConnectionString (Settings)" DbObjectName="PTS.dbo.vw_BIG_PICTURE" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        [PO Status], WIP, IIP, PROFORMA, [Original PO Amount], [Remaining PO Amount]
+FROM            vw_BIG_PICTURE</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PO Status" DataSetColumn="PO Status" />
+              <Mapping SourceColumn="Remaining PO Amount" DataSetColumn="Remaining PO Amount" />
+              <Mapping SourceColumn="WIP" DataSetColumn="WIP" />
+              <Mapping SourceColumn="IIP" DataSetColumn="IIP" />
+              <Mapping SourceColumn="PROFORMA" DataSetColumn="PROFORMA" />
+              <Mapping SourceColumn="Original PO Amount" DataSetColumn="Original PO Amount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PTSDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PTSDataSet1" msprop:Generator_UserDSName="PTSDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vw_BIG_PICTURE" msprop:Generator_TableClassName="vw_BIG_PICTUREDataTable" msprop:Generator_TableVarName="tablevw_BIG_PICTURE" msprop:Generator_TablePropName="vw_BIG_PICTURE" msprop:Generator_RowDeletingName="vw_BIG_PICTURERowDeleting" msprop:Generator_RowChangingName="vw_BIG_PICTURERowChanging" msprop:Generator_RowEvHandlerName="vw_BIG_PICTURERowChangeEventHandler" msprop:Generator_RowDeletedName="vw_BIG_PICTURERowDeleted" msprop:Generator_UserTableName="vw_BIG_PICTURE" msprop:Generator_RowChangedName="vw_BIG_PICTURERowChanged" msprop:Generator_RowEvArgName="vw_BIG_PICTURERowChangeEvent" msprop:Generator_RowClassName="vw_BIG_PICTURERow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PO_x0020_Status" msprop:Generator_ColumnVarNameInTable="columnPO_Status" msprop:Generator_ColumnPropNameInRow="PO_Status" msprop:Generator_ColumnPropNameInTable="PO_StatusColumn" msprop:Generator_UserColumnName="PO Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Remaining_x0020_PO_x0020_Amount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRemaining_PO_Amount" msprop:Generator_ColumnPropNameInRow="Remaining_PO_Amount" msprop:Generator_ColumnPropNameInTable="Remaining_PO_AmountColumn" msprop:Generator_UserColumnName="Remaining PO Amount" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WIP" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnWIP" msprop:Generator_ColumnPropNameInRow="WIP" msprop:Generator_ColumnPropNameInTable="WIPColumn" msprop:Generator_UserColumnName="WIP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IIP" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnIIP" msprop:Generator_ColumnPropNameInRow="IIP" msprop:Generator_ColumnPropNameInTable="IIPColumn" msprop:Generator_UserColumnName="IIP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROFORMA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPROFORMA" msprop:Generator_ColumnPropNameInRow="PROFORMA" msprop:Generator_ColumnPropNameInTable="PROFORMAColumn" msprop:Generator_UserColumnName="PROFORMA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Original_x0020_PO_x0020_Amount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnOriginal_PO_Amount" msprop:Generator_ColumnPropNameInRow="Original_PO_Amount" msprop:Generator_ColumnPropNameInTable="Original_PO_AmountColumn" msprop:Generator_UserColumnName="Original PO Amount" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

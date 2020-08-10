@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PTSDataSet" targetNamespace="http://tempuri.org/PTSDataSet.xsd" xmlns:mstns="http://tempuri.org/PTSDataSet.xsd" xmlns="http://tempuri.org/PTSDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PTSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PTSConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PSS.Properties.Settings.GlobalReference.Default.PTSConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw4_7_SPONSOR_PO_PIPELINE_STATUSTableAdapter" GeneratorDataComponentClassName="vw4_7_SPONSOR_PO_PIPELINE_STATUSTableAdapter" Name="vw4_7_SPONSOR_PO_PIPELINE_STATUS" UserDataComponentName="vw4_7_SPONSOR_PO_PIPELINE_STATUSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PTSConnectionString (Settings)" DbObjectName="PTS.dbo.vw4_7_SPONSOR_PO_PIPELINE_STATUS" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Sponsor, [Remaining PO Balance], [PO Status] FROM dbo.vw4_7_SPONSOR_PO_PIPELINE_STATUS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Sponsor" DataSetColumn="Sponsor" />
+              <Mapping SourceColumn="Remaining PO Balance" DataSetColumn="Remaining PO Balance" />
+              <Mapping SourceColumn="PO Status" DataSetColumn="PO Status" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PTSDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PTSDataSet" msprop:Generator_UserDSName="PTSDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vw4_7_SPONSOR_PO_PIPELINE_STATUS" msprop:Generator_TableClassName="vw4_7_SPONSOR_PO_PIPELINE_STATUSDataTable" msprop:Generator_TableVarName="tablevw4_7_SPONSOR_PO_PIPELINE_STATUS" msprop:Generator_TablePropName="vw4_7_SPONSOR_PO_PIPELINE_STATUS" msprop:Generator_RowDeletingName="vw4_7_SPONSOR_PO_PIPELINE_STATUSRowDeleting" msprop:Generator_RowChangingName="vw4_7_SPONSOR_PO_PIPELINE_STATUSRowChanging" msprop:Generator_RowEvHandlerName="vw4_7_SPONSOR_PO_PIPELINE_STATUSRowChangeEventHandler" msprop:Generator_RowDeletedName="vw4_7_SPONSOR_PO_PIPELINE_STATUSRowDeleted" msprop:Generator_UserTableName="vw4_7_SPONSOR_PO_PIPELINE_STATUS" msprop:Generator_RowChangedName="vw4_7_SPONSOR_PO_PIPELINE_STATUSRowChanged" msprop:Generator_RowEvArgName="vw4_7_SPONSOR_PO_PIPELINE_STATUSRowChangeEvent" msprop:Generator_RowClassName="vw4_7_SPONSOR_PO_PIPELINE_STATUSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Sponsor" msprop:Generator_ColumnVarNameInTable="columnSponsor" msprop:Generator_ColumnPropNameInRow="Sponsor" msprop:Generator_ColumnPropNameInTable="SponsorColumn" msprop:Generator_UserColumnName="Sponsor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Remaining_x0020_PO_x0020_Balance" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRemaining_PO_Balance" msprop:Generator_ColumnPropNameInRow="Remaining_PO_Balance" msprop:Generator_ColumnPropNameInTable="Remaining_PO_BalanceColumn" msprop:Generator_UserColumnName="Remaining PO Balance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PO_x0020_Status" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPO_Status" msprop:Generator_ColumnPropNameInRow="PO_Status" msprop:Generator_ColumnPropNameInTable="PO_StatusColumn" msprop:Generator_UserColumnName="PO Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="26" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

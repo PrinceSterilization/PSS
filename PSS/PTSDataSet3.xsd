@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PTSDataSet3" targetNamespace="http://tempuri.org/PTSDataSet3.xsd" xmlns:mstns="http://tempuri.org/PTSDataSet3.xsd" xmlns="http://tempuri.org/PTSDataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PTSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PTSConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PSS.Properties.Settings.GlobalReference.Default.PTSConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwMASTER_PIPELINE_SUMMARYTableAdapter" GeneratorDataComponentClassName="vwMASTER_PIPELINE_SUMMARYTableAdapter" Name="vwMASTER_PIPELINE_SUMMARY" UserDataComponentName="vwMASTER_PIPELINE_SUMMARYTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PTSConnectionString (Settings)" DbObjectName="PTS.dbo.vwMASTER_PIPELINE_SUMMARY" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [PO Year], [PO Amount], WIP, IIP, Proforma, [Invoiced Amount], [Remaining Balance], [PO Status] FROM dbo.vwMASTER_PIPELINE_SUMMARY</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PO Year" DataSetColumn="PO Year" />
+              <Mapping SourceColumn="PO Amount" DataSetColumn="PO Amount" />
+              <Mapping SourceColumn="WIP" DataSetColumn="WIP" />
+              <Mapping SourceColumn="IIP" DataSetColumn="IIP" />
+              <Mapping SourceColumn="Proforma" DataSetColumn="Proforma" />
+              <Mapping SourceColumn="Invoiced Amount" DataSetColumn="Invoiced Amount" />
+              <Mapping SourceColumn="Remaining Balance" DataSetColumn="Remaining Balance" />
+              <Mapping SourceColumn="PO Status" DataSetColumn="PO Status" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PTSDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PTSDataSet3" msprop:Generator_UserDSName="PTSDataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vwMASTER_PIPELINE_SUMMARY" msprop:Generator_TableClassName="vwMASTER_PIPELINE_SUMMARYDataTable" msprop:Generator_TableVarName="tablevwMASTER_PIPELINE_SUMMARY" msprop:Generator_TablePropName="vwMASTER_PIPELINE_SUMMARY" msprop:Generator_RowDeletingName="vwMASTER_PIPELINE_SUMMARYRowDeleting" msprop:Generator_RowChangingName="vwMASTER_PIPELINE_SUMMARYRowChanging" msprop:Generator_RowEvHandlerName="vwMASTER_PIPELINE_SUMMARYRowChangeEventHandler" msprop:Generator_RowDeletedName="vwMASTER_PIPELINE_SUMMARYRowDeleted" msprop:Generator_UserTableName="vwMASTER_PIPELINE_SUMMARY" msprop:Generator_RowChangedName="vwMASTER_PIPELINE_SUMMARYRowChanged" msprop:Generator_RowEvArgName="vwMASTER_PIPELINE_SUMMARYRowChangeEvent" msprop:Generator_RowClassName="vwMASTER_PIPELINE_SUMMARYRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PO_x0020_Year" msprop:Generator_ColumnVarNameInTable="columnPO_Year" msprop:Generator_ColumnPropNameInRow="PO_Year" msprop:Generator_ColumnPropNameInTable="PO_YearColumn" msprop:Generator_UserColumnName="PO Year" type="xs:int" minOccurs="0" />
+              <xs:element name="PO_x0020_Amount" msprop:Generator_ColumnVarNameInTable="columnPO_Amount" msprop:Generator_ColumnPropNameInRow="PO_Amount" msprop:Generator_ColumnPropNameInTable="PO_AmountColumn" msprop:Generator_UserColumnName="PO Amount" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WIP" msprop:Generator_ColumnVarNameInTable="columnWIP" msprop:Generator_ColumnPropNameInRow="WIP" msprop:Generator_ColumnPropNameInTable="WIPColumn" msprop:Generator_UserColumnName="WIP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IIP" msprop:Generator_ColumnVarNameInTable="columnIIP" msprop:Generator_ColumnPropNameInRow="IIP" msprop:Generator_ColumnPropNameInTable="IIPColumn" msprop:Generator_UserColumnName="IIP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Proforma" msprop:Generator_ColumnVarNameInTable="columnProforma" msprop:Generator_ColumnPropNameInRow="Proforma" msprop:Generator_ColumnPropNameInTable="ProformaColumn" msprop:Generator_UserColumnName="Proforma" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Invoiced_x0020_Amount" msprop:Generator_ColumnVarNameInTable="columnInvoiced_Amount" msprop:Generator_ColumnPropNameInRow="Invoiced_Amount" msprop:Generator_ColumnPropNameInTable="Invoiced_AmountColumn" msprop:Generator_UserColumnName="Invoiced Amount" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Remaining_x0020_Balance" msprop:Generator_ColumnVarNameInTable="columnRemaining_Balance" msprop:Generator_ColumnPropNameInRow="Remaining_Balance" msprop:Generator_ColumnPropNameInTable="Remaining_BalanceColumn" msprop:Generator_UserColumnName="Remaining Balance" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PO_x0020_Status" msprop:Generator_ColumnVarNameInTable="columnPO_Status" msprop:Generator_ColumnPropNameInRow="PO_Status" msprop:Generator_ColumnPropNameInTable="PO_StatusColumn" msprop:Generator_UserColumnName="PO Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
