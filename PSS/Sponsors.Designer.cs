@@ -619,12 +619,227 @@
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
-            // label44
+           
+            // label68                   1-1
+            // 
+            this.label68.BackColor = System.Drawing.Color.SteelBlue;
+            this.label68.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.ForeColor = System.Drawing.Color.White;
+            //this.label68.Location = new System.Drawing.Point(42, 222);
+            this.label68.Location = new System.Drawing.Point(42, 221);
+            this.label68.Margin = new System.Windows.Forms.Padding(0);
+            this.label68.Name = "label68";
+            //this.label68.Size = new System.Drawing.Size(61, 19);
+            this.label68.Size = new System.Drawing.Size(41, 20);
+            this.label68.TabIndex = 185;
+            this.label68.Text = "ID";
+            this.label68.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtContactID             1
+            // 
+            this.txtContactID.BackColor = System.Drawing.SystemColors.Window;
+            this.txtContactID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtContactID.Location = new System.Drawing.Point(0, 0);
+            this.txtContactID.Name = "txtContactID";
+            //this.txtContactID.Size = new System.Drawing.Size(61, 21);
+            this.txtContactID.Size = new System.Drawing.Size(41, 21);
+            this.txtContactID.TabIndex = 176;
+            this.txtContactID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactID_KeyPress);
+            // 
+            // label67              2-1
+            // 
+            this.label67.BackColor = System.Drawing.Color.SteelBlue;
+            this.label67.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.ForeColor = System.Drawing.Color.White;
+            //this.label67.Location = new System.Drawing.Point(108, 222);
+            this.label67.Location = new System.Drawing.Point(88, 221);
+            this.label67.Margin = new System.Windows.Forms.Padding(0);
+            this.label67.Name = "label67";
+            //this.label67.Size = new System.Drawing.Size(60, 19);
+            this.label67.Size = new System.Drawing.Size(191, 20);
+            this.label67.TabIndex = 186;
+            this.label67.Text = "Job Title";
+            this.label67.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            //
+            // txtContactTitle          2
+            // 
+            this.txtContactTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            //this.txtContactTitle.Location = new System.Drawing.Point(65, 0);
+            this.txtContactTitle.Location = new System.Drawing.Point(45, 0);
+            this.txtContactTitle.MaxLength = 50;
+            this.txtContactTitle.Multiline = true;
+            this.txtContactTitle.WordWrap = true;
+            this.txtContactTitle.Name = "txtContactTitle";
+            //this.txtContactTitle.Size = new System.Drawing.Size(61, 21);
+            this.txtContactTitle.Size = new System.Drawing.Size(191, 21);
+            this.txtContactTitle.TabIndex = 177;
+            this.txtContactTitle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactTitle_KeyPress);
+            // 
+            // label66                  3-1
+            // 
+            this.label66.BackColor = System.Drawing.Color.SteelBlue;
+            this.label66.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.ForeColor = System.Drawing.Color.White;
+            //this.label66.Location = new System.Drawing.Point(173, 222);
+            this.label66.Location = new System.Drawing.Point(284, 221);
+            this.label66.Margin = new System.Windows.Forms.Padding(0);
+            this.label66.Name = "label66";
+            //this.label66.Size = new System.Drawing.Size(184, 20);
+            this.label66.Size = new System.Drawing.Size(134, 20);
+            this.label66.TabIndex = 187;
+            this.label66.Text = "Last Name";
+            this.label66.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtContactLastName       3
+            // 
+            this.txtContactLastName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtContactLastName.Location = new System.Drawing.Point(242, 0);
+            this.txtContactLastName.MaxLength = 30;
+            this.txtContactLastName.Name = "txtContactLastName";
+            //this.txtContactLastName.Size = new System.Drawing.Size(185, 21);
+            this.txtContactLastName.Size = new System.Drawing.Size(134, 21);
+            this.txtContactLastName.TabIndex = 178;
+            this.txtContactLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactLastName_KeyPress);
+            // 
+            // label65              4-1
+            // 
+            this.label65.BackColor = System.Drawing.Color.SteelBlue;
+            this.label65.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.ForeColor = System.Drawing.Color.White;
+            //this.label65.Location = new System.Drawing.Point(362, 222);
+            this.label65.Location = new System.Drawing.Point(423, 221);
+            this.label65.Margin = new System.Windows.Forms.Padding(0);
+            this.label65.Name = "label65";
+            //this.label65.Size = new System.Drawing.Size(182, 20);
+            this.label65.Size = new System.Drawing.Size(132, 20);
+            this.label65.TabIndex = 188;
+            this.label65.Text = "First Name";
+            this.label65.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtContactFirstName      4
+            // 
+            this.txtContactFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            //this.txtContactFirstName.Location = new System.Drawing.Point(320, 0);
+            this.txtContactFirstName.Location = new System.Drawing.Point(381, 0);
+            this.txtContactFirstName.MaxLength = 30;
+            this.txtContactFirstName.Name = "txtContactFirstName";
+            //this.txtContactFirstName.Size = new System.Drawing.Size(182, 21);
+            this.txtContactFirstName.Size = new System.Drawing.Size(132, 21);
+            this.txtContactFirstName.TabIndex = 179;
+            this.txtContactFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactFirstName_KeyPress);
+            // 
+            
+            // label5               5-1 592-5-27
+            // 
+            this.label5.BackColor = System.Drawing.Color.SteelBlue;
+            this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            //this.label5.Location = new System.Drawing.Point(550, 222);
+            this.label5.Location = new System.Drawing.Point(560, 221);
+            this.label5.Margin = new System.Windows.Forms.Padding(0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(27, 20);
+            this.label5.TabIndex = 190;
+            this.label5.Text = "M.I.";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtContactMI             5
+            // 
+            this.txtContactMI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            //this.txtContactMI.Location = new System.Drawing.Point(507, 0);
+            this.txtContactMI.Location = new System.Drawing.Point(518, 0);
+            this.txtContactMI.MaxLength = 1;
+            this.txtContactMI.Name = "txtContactMI";
+            this.txtContactMI.Size = new System.Drawing.Size(28, 21);
+            this.txtContactMI.TabIndex = 180;
+            this.txtContactMI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactMI_KeyPress);
+            // 
+            // label64                  6-1
+            // 
+            this.label64.BackColor = System.Drawing.Color.SteelBlue;
+            this.label64.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.ForeColor = System.Drawing.Color.White;
+            //this.label64.Location = new System.Drawing.Point(582, 222);
+            this.label64.Location = new System.Drawing.Point(592, 221);
+            this.label64.Margin = new System.Windows.Forms.Padding(0);
+            this.label64.Name = "label64";
+            //this.label64.Size = new System.Drawing.Size(60, 21);
+            this.label64.Size = new System.Drawing.Size(50, 20);
+            this.label64.TabIndex = 189;
+            this.label64.Text = "Suffix";
+            this.label64.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtContactSuffix         6
+            // 
+            this.txtContactSuffix.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            //this.txtContactSuffix.Location = new System.Drawing.Point(539, 0);
+            this.txtContactSuffix.Location = new System.Drawing.Point(550, 0);
+            this.txtContactSuffix.Name = "txtContactSuffix";
+            //this.txtContactSuffix.Size = new System.Drawing.Size(61, 21);
+            this.txtContactSuffix.Size = new System.Drawing.Size(50, 21);
+            this.txtContactSuffix.TabIndex = 175;
+            this.txtContactSuffix.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactSuffix_KeyPress);
+            // 
+            
+            
+            
+            
+            
+            // label69                  7-1
+            // 
+            this.label69.BackColor = System.Drawing.Color.SteelBlue;
+            this.label69.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.ForeColor = System.Drawing.Color.White;
+            //this.label69.Location = new System.Drawing.Point(647, 222);
+            this.label69.Location = new System.Drawing.Point(647, 221);
+            this.label69.Margin = new System.Windows.Forms.Padding(0);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(44, 20);
+            this.label69.TabIndex = 192;
+            this.label69.Text = "Active";
+            this.label69.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // chkContactActive         7
+            // 
+            this.chkContactActive.AutoSize = true;
+            this.chkContactActive.Location = new System.Drawing.Point(624, 4);
+            this.chkContactActive.Name = "chkContactActive";
+            this.chkContactActive.Size = new System.Drawing.Size(15, 14);
+            this.chkContactActive.TabIndex = 173;
+            this.chkContactActive.UseVisualStyleBackColor = true;
+            this.chkContactActive.Click += new System.EventHandler(this.chkContactActive_Click);
+            //
+            // label70                  8-1
+            // 
+            this.label70.BackColor = System.Drawing.Color.SteelBlue;
+            this.label70.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.ForeColor = System.Drawing.Color.White;
+            //this.label70.Location = new System.Drawing.Point(696, 222);
+            this.label70.Location = new System.Drawing.Point(696, 221);
+            this.label70.Margin = new System.Windows.Forms.Padding(0);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(88, 20);
+            this.label70.TabIndex = 193;
+            this.label70.Text = "Holiday List";
+            this.label70.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // chkHoliday               8
+            // 
+            this.chkHoliday.AutoSize = true;
+            this.chkHoliday.Location = new System.Drawing.Point(690, 4);
+            this.chkHoliday.Name = "chkHoliday";
+            this.chkHoliday.Size = new System.Drawing.Size(15, 14);
+            this.chkHoliday.TabIndex = 174;
+            this.chkHoliday.UseVisualStyleBackColor = true;
+            this.chkHoliday.Click += new System.EventHandler(this.chkHoliday_Click);
+            // 
+            // label44          9-1
             // 
             this.label44.BackColor = System.Drawing.Color.SteelBlue;
             this.label44.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.Color.White;
-            this.label44.Location = new System.Drawing.Point(789, 222);
+            //this.label44.Location = new System.Drawing.Point(789, 222);
+            this.label44.Location = new System.Drawing.Point(789, 221);
             this.label44.Margin = new System.Windows.Forms.Padding(0);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(88, 20);
@@ -632,6 +847,17 @@
             this.label44.Text = "BDSUser";
             this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // chkConBDSUser            9
+            // 
+            this.chkConBDSUser.AutoSize = true;
+            this.chkConBDSUser.Location = new System.Drawing.Point(782, 4);
+            this.chkConBDSUser.Name = "chkConBDSUser";
+            this.chkConBDSUser.Size = new System.Drawing.Size(15, 14);
+            this.chkConBDSUser.TabIndex = 182;
+            this.chkConBDSUser.UseVisualStyleBackColor = true;
+            this.chkConBDSUser.Click += new System.EventHandler(this.chkConBDSUser_Click);
+            // 
+            
             // btnAddContact
             // 
             this.btnAddContact.Location = new System.Drawing.Point(362, 198);
@@ -656,19 +882,7 @@
             this.label71.Text = "CONTACTS";
             this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.SteelBlue;
-            this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(550, 222);
-            this.label5.Margin = new System.Windows.Forms.Padding(0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 20);
-            this.label5.TabIndex = 190;
-            this.label5.Text = "M.I.";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+           
             // btnContacts
             // 
             this.btnContacts.Location = new System.Drawing.Point(731, 198);
@@ -680,19 +894,7 @@
             this.btnContacts.Visible = false;
             this.btnContacts.Click += new System.EventHandler(this.btnContacts_Click);
             // 
-            // label67
-            // 
-            this.label67.BackColor = System.Drawing.Color.SteelBlue;
-            this.label67.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.ForeColor = System.Drawing.Color.White;
-            this.label67.Location = new System.Drawing.Point(108, 223);
-            this.label67.Margin = new System.Windows.Forms.Padding(0);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(60, 19);
-            this.label67.TabIndex = 186;
-            this.label67.Text = "Title";
-            this.label67.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+            
             // btnSaveContact
             // 
             this.btnSaveContact.Enabled = false;
@@ -704,19 +906,7 @@
             this.btnSaveContact.UseVisualStyleBackColor = true;
             this.btnSaveContact.Visible = false;
             // 
-            // label68
-            // 
-            this.label68.BackColor = System.Drawing.Color.SteelBlue;
-            this.label68.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.ForeColor = System.Drawing.Color.White;
-            this.label68.Location = new System.Drawing.Point(42, 223);
-            this.label68.Margin = new System.Windows.Forms.Padding(0);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(61, 19);
-            this.label68.TabIndex = 185;
-            this.label68.Text = "ID";
-            this.label68.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+           
             // btnDelContact
             // 
             this.btnDelContact.Location = new System.Drawing.Point(502, 198);
@@ -758,134 +948,14 @@
             this.dtrContacts.ItemValueNeeded += new Microsoft.VisualBasic.PowerPacks.DataRepeaterItemValueEventHandler(this.dtrContacts_ItemValueNeeded);
             this.dtrContacts.ItemValuePushed += new Microsoft.VisualBasic.PowerPacks.DataRepeaterItemValueEventHandler(this.dtrContacts_ItemValuePushed);
             // 
-            // chkConBDSUser
-            // 
-            this.chkConBDSUser.AutoSize = true;
-            this.chkConBDSUser.Location = new System.Drawing.Point(782, 4);
-            this.chkConBDSUser.Name = "chkConBDSUser";
-            this.chkConBDSUser.Size = new System.Drawing.Size(15, 14);
-            this.chkConBDSUser.TabIndex = 182;
-            this.chkConBDSUser.UseVisualStyleBackColor = true;
-            this.chkConBDSUser.Click += new System.EventHandler(this.chkConBDSUser_Click);
-            // 
-            // txtContactMI
-            // 
-            this.txtContactMI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtContactMI.Location = new System.Drawing.Point(507, 0);
-            this.txtContactMI.MaxLength = 1;
-            this.txtContactMI.Name = "txtContactMI";
-            this.txtContactMI.Size = new System.Drawing.Size(28, 21);
-            this.txtContactMI.TabIndex = 180;
-            this.txtContactMI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactMI_KeyPress);
-            // 
-            // txtContactFirstName
-            // 
-            this.txtContactFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtContactFirstName.Location = new System.Drawing.Point(320, 0);
-            this.txtContactFirstName.MaxLength = 30;
-            this.txtContactFirstName.Name = "txtContactFirstName";
-            this.txtContactFirstName.Size = new System.Drawing.Size(182, 21);
-            this.txtContactFirstName.TabIndex = 179;
-            this.txtContactFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactFirstName_KeyPress);
-            // 
-            // txtContactLastName
-            // 
-            this.txtContactLastName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtContactLastName.Location = new System.Drawing.Point(130, 0);
-            this.txtContactLastName.MaxLength = 30;
-            this.txtContactLastName.Name = "txtContactLastName";
-            this.txtContactLastName.Size = new System.Drawing.Size(185, 21);
-            this.txtContactLastName.TabIndex = 178;
-            this.txtContactLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactLastName_KeyPress);
-            // 
-            // txtContactTitle
-            // 
-            this.txtContactTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtContactTitle.Location = new System.Drawing.Point(65, 0);
-            this.txtContactTitle.MaxLength = 5;
-            this.txtContactTitle.Name = "txtContactTitle";
-            this.txtContactTitle.Size = new System.Drawing.Size(61, 21);
-            this.txtContactTitle.TabIndex = 177;
-            this.txtContactTitle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactTitle_KeyPress);
-            // 
-            // txtContactID
-            // 
-            this.txtContactID.BackColor = System.Drawing.SystemColors.Window;
-            this.txtContactID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtContactID.Location = new System.Drawing.Point(0, 0);
-            this.txtContactID.Name = "txtContactID";
-            this.txtContactID.Size = new System.Drawing.Size(61, 21);
-            this.txtContactID.TabIndex = 176;
-            this.txtContactID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactID_KeyPress);
-            // 
-            // txtContactSuffix
-            // 
-            this.txtContactSuffix.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtContactSuffix.Location = new System.Drawing.Point(539, 0);
-            this.txtContactSuffix.Name = "txtContactSuffix";
-            this.txtContactSuffix.Size = new System.Drawing.Size(61, 21);
-            this.txtContactSuffix.TabIndex = 175;
-            this.txtContactSuffix.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactSuffix_KeyPress);
-            // 
-            // chkHoliday
-            // 
-            this.chkHoliday.AutoSize = true;
-            this.chkHoliday.Location = new System.Drawing.Point(690, 4);
-            this.chkHoliday.Name = "chkHoliday";
-            this.chkHoliday.Size = new System.Drawing.Size(15, 14);
-            this.chkHoliday.TabIndex = 174;
-            this.chkHoliday.UseVisualStyleBackColor = true;
-            this.chkHoliday.Click += new System.EventHandler(this.chkHoliday_Click);
-            // 
-            // chkContactActive
-            // 
-            this.chkContactActive.AutoSize = true;
-            this.chkContactActive.Location = new System.Drawing.Point(624, 4);
-            this.chkContactActive.Name = "chkContactActive";
-            this.chkContactActive.Size = new System.Drawing.Size(15, 14);
-            this.chkContactActive.TabIndex = 173;
-            this.chkContactActive.UseVisualStyleBackColor = true;
-            this.chkContactActive.Click += new System.EventHandler(this.chkContactActive_Click);
-            // 
-            // label64
-            // 
-            this.label64.BackColor = System.Drawing.Color.SteelBlue;
-            this.label64.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.ForeColor = System.Drawing.Color.White;
-            this.label64.Location = new System.Drawing.Point(582, 222);
-            this.label64.Margin = new System.Windows.Forms.Padding(0);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(60, 20);
-            this.label64.TabIndex = 189;
-            this.label64.Text = "Suffix";
-            this.label64.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label66
-            // 
-            this.label66.BackColor = System.Drawing.Color.SteelBlue;
-            this.label66.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.ForeColor = System.Drawing.Color.White;
-            this.label66.Location = new System.Drawing.Point(173, 222);
-            this.label66.Margin = new System.Windows.Forms.Padding(0);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(184, 20);
-            this.label66.TabIndex = 187;
-            this.label66.Text = "Last Name";
-            this.label66.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label69
-            // 
-            this.label69.BackColor = System.Drawing.Color.SteelBlue;
-            this.label69.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label69.ForeColor = System.Drawing.Color.White;
-            this.label69.Location = new System.Drawing.Point(647, 222);
-            this.label69.Margin = new System.Windows.Forms.Padding(0);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(44, 20);
-            this.label69.TabIndex = 192;
-            this.label69.Text = "Active";
-            this.label69.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+            
+           
+            
+            
+           
+            
+           
+            
             // btnEditContact
             // 
             this.btnEditContact.Location = new System.Drawing.Point(591, 198);
@@ -896,19 +966,7 @@
             this.btnEditContact.UseVisualStyleBackColor = true;
             this.btnEditContact.Visible = false;
             // 
-            // label70
-            // 
-            this.label70.BackColor = System.Drawing.Color.SteelBlue;
-            this.label70.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.ForeColor = System.Drawing.Color.White;
-            this.label70.Location = new System.Drawing.Point(696, 222);
-            this.label70.Margin = new System.Windows.Forms.Padding(0);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(88, 20);
-            this.label70.TabIndex = 193;
-            this.label70.Text = "Holiday List";
-            this.label70.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+           
             // btnCancelContact
             // 
             this.btnCancelContact.Enabled = false;
@@ -920,19 +978,7 @@
             this.btnCancelContact.UseVisualStyleBackColor = true;
             this.btnCancelContact.Click += new System.EventHandler(this.btnCancelContact_Click);
             // 
-            // label65
-            // 
-            this.label65.BackColor = System.Drawing.Color.SteelBlue;
-            this.label65.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.ForeColor = System.Drawing.Color.White;
-            this.label65.Location = new System.Drawing.Point(362, 222);
-            this.label65.Margin = new System.Windows.Forms.Padding(0);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(182, 20);
-            this.label65.TabIndex = 188;
-            this.label65.Text = "First Name";
-            this.label65.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+            
             // cboIndustries
             // 
             this.cboIndustries.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -1895,19 +1941,7 @@
             this.txtConAddress.TabIndex = 2;
             this.txtConAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConAddress_KeyPress);
             // 
-            // label17
-            // 
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(1, 5);
-            this.label17.Margin = new System.Windows.Forms.Padding(0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(51, 21);
-            this.label17.TabIndex = 13;
-            this.label17.Text = "ID";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
+            
             // label72
             // 
             this.label72.BackColor = System.Drawing.Color.DodgerBlue;
@@ -2215,6 +2249,19 @@
             this.txtSpNotes.TabIndex = 8;
             this.txtSpNotes.Enter += new System.EventHandler(this.txtSpNotes_Enter);
             this.txtSpNotes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSpNotes_KeyPress);
+            // 
+            // label17             
+            // 
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(1, 5);
+            this.label17.Margin = new System.Windows.Forms.Padding(0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(51, 21);
+            this.label17.TabIndex = 13;
+            this.label17.Text = "ID";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label18
             // 

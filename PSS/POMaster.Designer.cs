@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(POMaster));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlRecord = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPONotes = new System.Windows.Forms.TextBox();
@@ -58,6 +58,10 @@
             this.bsSponsors = new System.Windows.Forms.BindingSource(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.cmbStatusPO = new System.Windows.Forms.ComboBox();
+            this.txtCrntYrAmnt = new GISControls.TextBoxChar();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtNxtYrsAmnt = new GISControls.TextBoxChar();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bsFile)).BeginInit();
             this.pnlRecord.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSponsors)).BeginInit();
@@ -76,6 +80,10 @@
             // 
             this.pnlRecord.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.pnlRecord.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlRecord.Controls.Add(this.txtNxtYrsAmnt);
+            this.pnlRecord.Controls.Add(this.label9);
+            this.pnlRecord.Controls.Add(this.txtCrntYrAmnt);
+            this.pnlRecord.Controls.Add(this.label8);
             this.pnlRecord.Controls.Add(this.label4);
             this.pnlRecord.Controls.Add(this.txtPONotes);
             this.pnlRecord.Controls.Add(this.label3);
@@ -124,11 +132,11 @@
             // 
             // txtPONotes
             // 
-            this.txtPONotes.Location = new System.Drawing.Point(141, 183);
+            this.txtPONotes.Location = new System.Drawing.Point(141, 231);
             this.txtPONotes.MaxLength = 499;
             this.txtPONotes.Multiline = true;
             this.txtPONotes.Name = "txtPONotes";
-            this.txtPONotes.Size = new System.Drawing.Size(456, 106);
+            this.txtPONotes.Size = new System.Drawing.Size(456, 58);
             this.txtPONotes.TabIndex = 127;
             // 
             // label3
@@ -136,10 +144,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(14, 225);
+            this.label3.Location = new System.Drawing.Point(14, 254);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(2);
-            this.label3.Size = new System.Drawing.Size(123, 23);
+            this.label3.Size = new System.Drawing.Size(78, 23);
             this.label3.TabIndex = 126;
             this.label3.Text = "PO Notes";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -383,14 +391,14 @@
             this.dgvSponsors.BackgroundColor = System.Drawing.Color.White;
             this.dgvSponsors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSponsors.ColumnHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Moccasin;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSponsors.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Moccasin;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSponsors.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSponsors.Location = new System.Drawing.Point(197, 65);
             this.dgvSponsors.Name = "dgvSponsors";
             this.dgvSponsors.ReadOnly = true;
@@ -417,6 +425,54 @@
             this.cmbStatusPO.TabIndex = 107;
             this.cmbStatusPO.Text = "Select PO Status";
             this.cmbStatusPO.SelectedIndexChanged += new System.EventHandler(this.CmbStatusPO_SelectedIndexChanged);
+            // 
+            // txtCrntYrAmnt
+            // 
+            this.txtCrntYrAmnt.BackColor = System.Drawing.Color.White;
+            this.txtCrntYrAmnt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCrntYrAmnt.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCrntYrAmnt.Location = new System.Drawing.Point(141, 179);
+            this.txtCrntYrAmnt.MaxLength = 0;
+            this.txtCrntYrAmnt.Name = "txtCrntYrAmnt";
+            this.txtCrntYrAmnt.Size = new System.Drawing.Size(107, 21);
+            this.txtCrntYrAmnt.TabIndex = 129;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label8.Location = new System.Drawing.Point(14, 178);
+            this.label8.Name = "label8";
+            this.label8.Padding = new System.Windows.Forms.Padding(2);
+            this.label8.Size = new System.Drawing.Size(123, 23);
+            this.label8.TabIndex = 130;
+            this.label8.Text = "Current Year PO Amt";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtNxtYrsAmnt
+            // 
+            this.txtNxtYrsAmnt.BackColor = System.Drawing.Color.White;
+            this.txtNxtYrsAmnt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNxtYrsAmnt.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNxtYrsAmnt.Location = new System.Drawing.Point(141, 202);
+            this.txtNxtYrsAmnt.MaxLength = 0;
+            this.txtNxtYrsAmnt.Name = "txtNxtYrsAmnt";
+            this.txtNxtYrsAmnt.Size = new System.Drawing.Size(107, 21);
+            this.txtNxtYrsAmnt.TabIndex = 131;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label9.Location = new System.Drawing.Point(14, 201);
+            this.label9.Name = "label9";
+            this.label9.Padding = new System.Windows.Forms.Padding(2);
+            this.label9.Size = new System.Drawing.Size(123, 23);
+            this.label9.TabIndex = 132;
+            this.label9.Text = "Next Years PO Amt";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // POMaster
             // 
@@ -474,5 +530,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPONotes;
         private System.Windows.Forms.Label label3;
+        private GISControls.TextBoxChar txtNxtYrsAmnt;
+        private System.Windows.Forms.Label label9;
+        private GISControls.TextBoxChar txtCrntYrAmnt;
+        private System.Windows.Forms.Label label8;
     }
 }

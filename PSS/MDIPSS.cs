@@ -336,7 +336,9 @@ namespace PSS
             //}
             //dtB.Dispose();
 
-            m_oWorker.RunWorkerAsync();
+
+            //GY 2020 Comment out pop-up window prompt
+            //m_oWorker.RunWorkerAsync();
         }
 
         private void tsmiLogIns_Click(object sender, EventArgs e)

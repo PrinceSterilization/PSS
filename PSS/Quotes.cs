@@ -1144,7 +1144,7 @@ namespace PSS
             {
                 txtBody.Text = "Dear " + strCFName + "," + Environment.NewLine + Environment.NewLine +
                                "I am following up on the attached quote you requested (" + txtCmpyCode.Text.Trim().Trim() + txtQuoteNo.Text + ".R" + txtRevNo.Text + ") - any news on whether you will be sending " +
-                               "this testing to us? " + Environment.NewLine + Environment.NewLine + "Our records indicate that we do not have a signed copy of the quote for our files. At your convenience, please e-mail (preferred) or " +
+                               "this work or order to us? " + Environment.NewLine + Environment.NewLine + "Our records indicate that we do not have a signed copy of the quote for our files. At your convenience, please e-mail (preferred) or " +
                                Environment.NewLine + "fax a signed copy to my attention:(973) 227-0812. If you have elected not to send us the work, we value any input as to why and " + 
                                Environment.NewLine + "ask if you could please let us know by checking off  one of the below:" + Environment.NewLine + Environment.NewLine +
                                "[  ] price not competitive  [  ] facility too far away  [  ] work not necessary anymore  [  ] Other: ______________________________";

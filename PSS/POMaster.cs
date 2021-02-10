@@ -270,6 +270,10 @@ namespace PSS
             }
             //PO Notes
             txtPONotes.Text= dgvFile.CurrentRow.Cells["PO Notes"].Value.ToString();
+            //'Current Yr Amt'
+            txtCrntYrAmnt.Text = dgvFile.CurrentRow.Cells["Current Yr Amt"].Value.ToString();
+            //'Next Years Amt'
+            txtNxtYrsAmnt.Text = dgvFile.CurrentRow.Cells["Next Years Amt"].Value.ToString();
         }
 
         private bool MatchingRecord(string strKeyField, string strMatchField, string strTableName, string strMatchData)
@@ -317,24 +321,36 @@ namespace PSS
             dgvFile.Columns["PONo"].HeaderText = "PO NO.";
             dgvFile.Columns["PODate"].HeaderText = "PO DATE";
             dgvFile.Columns["Amount"].HeaderText = "TOTAL AMOUNT ($)";
+            dgvFile.Columns["Current Yr Amt"].HeaderText = "CURRENT YEAR AMOUNT ($)";
+            dgvFile.Columns["Next Years Amt"].HeaderText = "NEXT YEARS AMOUNT ($)";
             dgvFile.Columns["FilePath"].HeaderText = "FILE LOCATION/NAME";
             dgvFile.Columns["POStatus"].HeaderText = "PO STATUS";
             //Columns Width
             dgvFile.Columns["SponsorName"].Width = 350;
             dgvFile.Columns["PONo"].Width = 150;
             dgvFile.Columns["Amount"].Width = 150;
+            dgvFile.Columns["Current Yr Amt"].Width = 150;
+            dgvFile.Columns["Next Years Amt"].Width = 150;
             dgvFile.Columns["PODate"].Width = 150;
             dgvFile.Columns["FilePath"].Width = 500;
             dgvFile.Columns["POStatus"].Width = 100;
             dgvFile.Columns["PO Notes"].Width = 500;
+           
             //Columns Style
             dgvFile.Columns["PODate"].DefaultCellStyle.Format = "MM/dd/yyyy";
             dgvFile.Columns["PODate"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvFile.Columns["Amount"].DefaultCellStyle.Format = "#,##0.00";
             dgvFile.Columns["Amount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            //Current Yr Amt
+            dgvFile.Columns["Current Yr Amt"].DefaultCellStyle.Format = "#,##0.00";
+            dgvFile.Columns["Current Yr Amt"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            //Next Yr Amt
+            dgvFile.Columns["Next Years Amt"].DefaultCellStyle.Format = "#,##0.00";
+            dgvFile.Columns["Next Years Amt"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             //Visibility
             dgvFile.Columns["SponsorID"].Visible = false;
             dgvFile.Columns["PO Notes"].Visible = true;
+           // dgvFile.Columns["Next Years Amt"].Visible = false;
         }
 
         private void dgvDoubleClickHandler(object sender, EventArgs e)
@@ -486,6 +502,8 @@ namespace PSS
             //}
 
             sqlcmd.Parameters.AddWithValue("@PONotes", strNotes);
+            sqlcmd.Parameters.AddWithValue("@CrntYrAmnt", Convert.ToDecimal(txtCrntYrAmnt.Text));
+            sqlcmd.Parameters.AddWithValue("@NxtYrsAmnt", Convert.ToDecimal(txtNxtYrsAmnt.Text));
             sqlcmd.CommandType = CommandType.StoredProcedure;
             sqlcmd.CommandText = "spAddEditPO";
             try
