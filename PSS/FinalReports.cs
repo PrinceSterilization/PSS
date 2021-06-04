@@ -2612,7 +2612,7 @@ namespace PSS
                     txtSubject.Text = "C-" + txtRptNo.Text + "-R" + txtRevNo.Text + " Article Name: " + PSSClass.Samples.ArticleDesc(txtCmpyCode.Text, Convert.ToInt32(cboGBLs.Text));
 
                 txtBody.Text = "Dear " + PSSClass.Contacts.ConFirstName(Convert.ToInt16(txtContactID.Text), Convert.ToInt16(txtSponsorID.Text)) + ", " + Environment.NewLine + Environment.NewLine +
-                            "Thank you for your support of Prince Sterilizaton Services. " + Environment.NewLine + "Please find attached our Final Report on the samples of " + PSSClass.Samples.ArticleDesc(txtCmpyCode.Text, Convert.ToInt32(cboGBLs.Text)) + "." +
+                            "Thank you for your support of Prince Sterilizaton Services, LLC. " + Environment.NewLine + "Please find attached our Final Report on the samples of " + PSSClass.Samples.ArticleDesc(txtCmpyCode.Text, Convert.ToInt32(cboGBLs.Text)) + "." +
                             Environment.NewLine + Environment.NewLine;  
                             //"<i>Prince Sterilization Services is pleased to announce the availability of our Report Server. This advanced technology will " + Environment.NewLine + "make <u>your job easier</u>.  " +
                             //"Specifically you will have real-time access to up to 6 months of your e-reports. Perfect for when you" + Environment.NewLine + "cannot locate a report. You will be able to login to the protected " +
@@ -3177,7 +3177,7 @@ namespace PSS
                 txtSubject.Text = "C-" + Convert.ToInt32(txtRptNo.Text).ToString("000000") + "-R" + txtRevNo.Text + " Article Name: " + PSSClass.Samples.ArticleDesc(txtCmpyCode.Text, Convert.ToInt32(cboGBLs.Text));
 
             txtBody.Text = "Dear " + PSSClass.Contacts.ConFirstName(Convert.ToInt16(txtContactID.Text), Convert.ToInt16(txtSponsorID.Text)) + ", " + Environment.NewLine + Environment.NewLine +
-                       "Thank you for your support of Prince sterilization Services. " + Environment.NewLine + "Please find attached our Final Report on the samples of " + PSSClass.Samples.ArticleDesc(txtCmpyCode.Text, Convert.ToInt32(cboGBLs.Text)) + "." +
+                       "Thank you for your support of Prince Sterilization Services, LLC. " + Environment.NewLine + "Please find attached our Final Report on the samples of " + PSSClass.Samples.ArticleDesc(txtCmpyCode.Text, Convert.ToInt32(cboGBLs.Text)) + "." +
                        Environment.NewLine + Environment.NewLine;
                        //"<i>Gibraltar Laboratories is pleased to announce the availability of our Report Server. This advanced technology will " + Environment.NewLine + "make <u>your job easier</u>.  " +
                        //"Specifically you will have real-time access to up to 6 months of your e-reports. Perfect for when you" + Environment.NewLine + "cannot locate a report. You will be able to login to the protected " +

@@ -6194,7 +6194,7 @@ namespace PSS
                               "date for your order. It is critical for you to review it and immediately inform us in writing of any questions or corrections that you have. <br/><br/> " +
                               "Non-acknowledgement of this document is considered by PRINCE as the Sponsor's acceptance and agreement of the accuracy and correctness <br/> " +
                               "of our records and releases PRINCE from any further liabilities. Failure by Sponsor to return PRINCE's Terms, Conditions and Pricing Policy is taken <br/> " +
-                              "by PRINCE as acceptance of same by Sponsor. Thank you for your support of <b>Prince Sterilization Services</b>.<br/><br/>";
+                              "by PRINCE as acceptance of same by Sponsor. Thank you for your support of <b>Prince Sterilization Services, LLC.</b>.<br/><br/>";
                 }
                 else
                 strText = "Dear " + strCFName + ", <br/><br/>" +  
@@ -6204,9 +6204,9 @@ namespace PSS
                     "dates of your testing as well as details that will appear in the Final Report. It is critical for you to review it <br/> " +
                     "and immediately inform us in writing of any questions or corrections that you have. <br/><br/> " +
                     "Non-acknowledgement of this document is considered by PRINCE as the Sponsor's acceptance and agreement <br/>" + 
-                    "of the accuracy and correctness of our records and releases PRINCE from any further liabilities. Failure by <br/>" + 
-                    "Sponsor to return PRINCE's Terms, Conditions and Pricing Policy is taken by Prince Sterilization Services as acceptance of same by <br/> " + 
-                    "Sponsor. Thank you for your support of <b>Prince Sterilization Services.</b><br/><br/>";
+                    "of the accuracy and correctness of our records and releases PRINCE from any further liabilities. Failure by <br/>" +
+                    "Sponsor to return PRINCE's Terms, Conditions and Pricing Policy is taken by Prince Sterilization Services, LLC. as acceptance of same by <br/> " +
+                    "Sponsor. Thank you for your support of <b>Prince Sterilization Services, LLC.</b><br/><br/>";
 
                 oMsg.HTMLBody = "<FONT face=\"Arial\">";
                 oMsg.HTMLBody += strText.Trim() + strSignature;

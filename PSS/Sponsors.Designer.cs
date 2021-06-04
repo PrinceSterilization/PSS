@@ -35,6 +35,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlRecord = new System.Windows.Forms.Panel();
+            this.label61 = new System.Windows.Forms.Label();
+            this.dtpDateTill = new System.Windows.Forms.DateTimePicker();
+            this.txtOldName = new System.Windows.Forms.TextBox();
+            this.label60 = new System.Windows.Forms.Label();
             this.dgvStates = new System.Windows.Forms.DataGridView();
             this.bnContacts = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
@@ -439,6 +443,10 @@
             // 
             this.pnlRecord.BackColor = System.Drawing.Color.AliceBlue;
             this.pnlRecord.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlRecord.Controls.Add(this.label61);
+            this.pnlRecord.Controls.Add(this.dtpDateTill);
+            this.pnlRecord.Controls.Add(this.txtOldName);
+            this.pnlRecord.Controls.Add(this.label60);
             this.pnlRecord.Controls.Add(this.dgvStates);
             this.pnlRecord.Controls.Add(this.bnContacts);
             this.pnlRecord.Controls.Add(this.label44);
@@ -1180,7 +1188,7 @@
             this.label63.BackColor = System.Drawing.Color.Transparent;
             this.label63.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label63.ForeColor = System.Drawing.Color.Black;
-            this.label63.Location = new System.Drawing.Point(21, 108);
+            this.label63.Location = new System.Drawing.Point(21, 110);
             this.label63.Margin = new System.Windows.Forms.Padding(0);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(96, 25);
@@ -1193,7 +1201,7 @@
             this.txtNotes.BackColor = System.Drawing.Color.White;
             this.txtNotes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNotes.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNotes.Location = new System.Drawing.Point(120, 108);
+            this.txtNotes.Location = new System.Drawing.Point(120, 110);
             this.txtNotes.Multiline = true;
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -4173,7 +4181,7 @@
             this.txtName.Location = new System.Drawing.Point(120, 64);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(394, 41);
+            this.txtName.Size = new System.Drawing.Size(394, 21);
             this.txtName.TabIndex = 1;
             // 
             // label2
@@ -4549,6 +4557,56 @@
             this.btnCancelSend.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelSend.UseVisualStyleBackColor = false;
             this.btnCancelSend.Click += new System.EventHandler(this.btnCancelSend_Click);
+            // 
+            // label60
+            // 
+            this.label60.BackColor = System.Drawing.Color.Transparent;
+            this.label60.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.ForeColor = System.Drawing.Color.Black;
+            this.label60.Location = new System.Drawing.Point(21, 83);
+            this.label60.Margin = new System.Windows.Forms.Padding(0);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(96, 25);
+            this.label60.TabIndex = 500;
+            this.label60.Text = "Old Name";
+            this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtOldName
+            // 
+            this.txtOldName.BackColor = System.Drawing.Color.White;
+            this.txtOldName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtOldName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtOldName.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOldName.Location = new System.Drawing.Point(120, 88);
+            this.txtOldName.Name = "txtOldName";
+            this.txtOldName.Size = new System.Drawing.Size(215, 21);
+            this.txtOldName.TabIndex = 501;
+            // 
+            // label61
+            // 
+            this.label61.BackColor = System.Drawing.Color.Transparent;
+            this.label61.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.ForeColor = System.Drawing.Color.Black;
+            this.label61.Location = new System.Drawing.Point(338, 88);
+            this.label61.Margin = new System.Windows.Forms.Padding(0);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(65, 19);
+            this.label61.TabIndex = 502;
+            this.label61.Text = "Valid Till:";
+            this.label61.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // dtpDateTill
+            // 
+            this.dtpDateTill.Checked = false;
+            this.dtpDateTill.CustomFormat = "MM/dd/yyyy";
+            this.dtpDateTill.Enabled = false;
+            this.dtpDateTill.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateTill.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDateTill.Location = new System.Drawing.Point(407, 87);
+            this.dtpDateTill.Name = "dtpDateTill";
+            this.dtpDateTill.Size = new System.Drawing.Size(106, 21);
+            this.dtpDateTill.ValueChanged += new System.EventHandler(this.DateTimePicker1_ValueChanged);
+            this.dtpDateTill.TabIndex = 503;
             // 
             // Sponsors
             // 
@@ -4994,5 +5052,9 @@
         private System.Windows.Forms.Button btnSendEMail;
         private System.Windows.Forms.Label lblCHHeader;
         private System.Windows.Forms.Button btnCancelSend;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.DateTimePicker dtpDateTill;
+        private System.Windows.Forms.TextBox txtOldName;
+        private System.Windows.Forms.Label label60;
     }
 }

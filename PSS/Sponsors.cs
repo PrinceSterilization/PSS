@@ -483,6 +483,25 @@ namespace PSS
             //Data Bindings for Main
             txtID.DataBindings.Add("Text", bsMain, "SponsorID", true);
             txtName.DataBindings.Add("Text", bsMain, "SponsorName", true);
+            //NEW CONTROLS
+
+            //SponsorOldName - nvarchar(150), 
+            //Uncomment next 1 line
+            txtOldName.DataBindings.Add("Text", bsMain, "SponsorOldName", true);
+            //OldSpNameExpDate - datetime
+            dtpDateTill.Format = DateTimePickerFormat.Custom;
+            if (string.IsNullOrEmpty(txtOldName.Text.Trim()))
+            {
+                dtpDateTill.CustomFormat = " ";
+            }
+            else
+            {
+                dtpDateTill.CustomFormat = "MMM dd, yyyy";
+            }
+            //Uncomment next 1 line
+            dtpDateTill.DataBindings.Add("Value", bsMain, "OldSpNameExpDate", true);
+
+            //END NEW CONTROLS
             dtpEntryDate.DataBindings.Add("Value", bsMain, "DateCreated", true);
             dtpPermDate.DataBindings.Add("Value", bsMain, "DatePermanent", true);
             txtCRStatus.DataBindings.Add("Text", bsMain, "CRStatusCode", true);
@@ -544,8 +563,12 @@ namespace PSS
             OpenControls(pnlAP, false); OpenControls(pnlCRApp, false);
             OpenControls(pnlCRStatus, false); OpenControls(pnlChargeType, false);
         }
-
-        private bool MatchingRecord(string strKeyField, string strMatchField, string strTableName, string strMatchData)
+        private void DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            dtpDateTill.Format = DateTimePickerFormat.Custom;
+            dtpDateTill.CustomFormat = "MMM dd, yyyy";
+        }
+            private bool MatchingRecord(string strKeyField, string strMatchField, string strTableName, string strMatchData)
         {
             SqlConnection sqlcnn = PSSClass.DBConnection.PSSConnection();
             if (sqlcnn == null)
@@ -596,6 +619,7 @@ namespace PSS
             dgvFile.Columns["ChargeType"].HeaderText = "CHARGE TYPE";
             dgvFile.Columns["SponsorStatus"].HeaderText = "STATUS";
             dgvFile.Columns["CreditLimit"].HeaderText = "CREDIT LIMIT";
+            //dgvFile.Columns["SponsorOldName"].HeaderText = "OLD NAME";
             dgvFile.Columns["SponsorID"].Width = 80;
             dgvFile.Columns["SponsorID"].DefaultCellStyle.Padding = new Padding(5, 0, 0, 0);
             dgvFile.Columns["SponsorID"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -612,6 +636,7 @@ namespace PSS
             dgvFile.Columns["CreditStatus"].Width = 120;
             dgvFile.Columns["ChargeType"].Width = 120;
             dgvFile.Columns["SponsorStatus"].Width = 85;
+            //dgvFile.Columns["SponsorOldName"].Width = 375;
             dgvFile.Columns["SponsorName"].Frozen = true;
             chkShowInactive.Visible = true;
         }
@@ -724,6 +749,10 @@ namespace PSS
             //Data Bindings for Main
             txtID.DataBindings.Add("Text", bsMain, "SponsorID", true);
             txtName.DataBindings.Add("Text", bsMain, "SponsorName", true);
+            //NEW CONTROLS
+            //txtOldName.DataBindings.Add("Text", bsMain, "SponsorOldName", true);
+            //dtpDateTill.DataBindings.Add("Value", bsMain, "OldSpNameExpDate", true);
+            //END NEW CONTROLS
             dtpEntryDate.DataBindings.Add("Value", bsMain, "DateCreated", true);
             dtpPermDate.DataBindings.Add("Value", bsMain, "DatePermanent", true);
             txtCRStatus.DataBindings.Add("Text", bsMain, "CRStatusCode", true);
@@ -825,6 +854,7 @@ namespace PSS
 
         private void SaveRecord()
         {
+
             if (txtName.Text.Trim() == "")
             {
                 MessageBox.Show("Please enter Sponsor Name.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -889,7 +919,7 @@ namespace PSS
 
                 sqlcmd.Parameters.AddWithValue("@nMode", nMode);
                 sqlcmd.Parameters.AddWithValue("@SpID", Convert.ToInt16(txtID.Text));
-                sqlcmd.Parameters.AddWithValue("@SpName", txtName.Text.Trim());
+                sqlcmd.Parameters.AddWithValue("@SpName", txtName.Text.Trim());               
                 sqlcmd.Parameters.AddWithValue("@SpNotes", txtNotes.Text.Trim().Replace("'", "''"));
                 sqlcmd.Parameters.AddWithValue("@FAXRpt", chkFAX.CheckState);
                 sqlcmd.Parameters.AddWithValue("@PrintSRpt", chkPrintSRpt.CheckState);
@@ -934,11 +964,33 @@ namespace PSS
                 else
                     sqlcmd.Parameters.AddWithValue("@CRLimit", DBNull.Value);
 
+               
+
+
                 if (chkInactive.Checked == false)
                     sqlcmd.Parameters.AddWithValue("@Active", 1);
                 else
                     sqlcmd.Parameters.AddWithValue("@Active", 0);
                 sqlcmd.Parameters.AddWithValue("@UserID", LogIn.nUserID);
+
+                //NEW CONTROLS ADD SPONSOR's PREVIOUS NAME AND DATE WHEN IT HAS BEEN CHANGED                
+                if (txtOldName.Text.Trim().Length > 0 && txtOldName.Text.Trim().Length < 100)
+                {
+                    //sqlcmd.Parameters.Add("@OldSpName", SqlDbType.NVarChar);
+                    //sqlcmd.Parameters["@OldSpName"].Value = txtOldName.Text.Trim();
+
+                    string strTemp = txtOldName.Text.Trim();
+                    sqlcmd.Parameters.AddWithValue("@OldSpName", strTemp);
+                    sqlcmd.Parameters.AddWithValue("@OldSpNameExpDate", dtpDateTill.Value);
+                }
+                else
+                {
+                    sqlcmd.Parameters.AddWithValue("@OldSpName", DBNull.Value);
+                    sqlcmd.Parameters.AddWithValue("@OldSpNameExpDate", DBNull.Value);
+                }
+                //END NEW CONTROLS
+
+
                 sqlcmd.CommandType = CommandType.StoredProcedure;
                 sqlcmd.CommandText = "spAddEditSponsor";
                 try
@@ -1042,7 +1094,7 @@ namespace PSS
                                  "djprince@princesterilization.com;dlprince@princesterilization.com";
                     txtSubject.Text = "Credit Hold";
                     txtBody.Text = "Dear Sponsor, <br><br>";
-                    txtBody.Text = txtBody.Text + "The release of Prince Sterilization Services communications, such as Final Reports,<br>";
+                    txtBody.Text = txtBody.Text + "The release of Prince Sterilization Services, LLC. communications, such as Final Reports,<br>";
                     txtBody.Text = txtBody.Text + "are governed by our policy. Please be aware that it is necessary for your company to<br>";
                     txtBody.Text = txtBody.Text + "not exceed our credit terms (" + nT.ToString() + " days" + "). Until your account is brought into a state of<br>";
                     txtBody.Text = txtBody.Text + "compliance with the credit terms that we have set for your company, we are not able<br>";

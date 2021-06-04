@@ -252,10 +252,13 @@ namespace PSS
 		}
 		private void btnReturn_Click(object sender, EventArgs e)
 		{
-			pnlSummary.Visible = false; this.MaximumSize = new Size(pnlReports.Width + 60, pnlReports.Height + 160);
-			this.Size = new Size(pnlReports.Width + 60, pnlReports.Height + 180);
-			//this.MaximumSize = new Size(pnlReports.Width + 60, pnlReports.Height + 150);
-			//this.MinimumSize = new Size(pnlReports.Width + 60, pnlReports.Height + 150);
+			pnlSummary.Visible = false;
+			this.Size = new Size(405, 370);
+
+
+			//pnlSummary.Visible = false; this.MaximumSize = new Size(pnlReports.Width + 60, pnlReports.Height + 160);
+			//this.Size = new Size(pnlReports.Width + 60, pnlReports.Height + 180);
+			
 		}
 		private void AcctgReports_Activated(object sender, EventArgs e)
 		{
@@ -317,10 +320,11 @@ namespace PSS
 							int ingGroupHeight = intGridProjectedHight + 145;
 							grpPipeSummary.Height = ingGroupHeight;
 							gvPipelineSummary.Height = intGridProjectedHight;
+							if (grpBigPicture.Visible == true) { grpBigPicture.Visible = false; }
 							//Resize                            
 							this.Size = new Size(grpPipeSummary.Width + 50, grpPipeSummary.Height + 50);
 							grpPipeSummary.Visible = true;
-							if (grpBigPicture.Visible == true) { grpBigPicture.Visible = false; }
+							
 						}
 						break;
 				}
@@ -365,9 +369,10 @@ namespace PSS
 
 									
 								}
+								
+								if (grpPipeSummary.Visible == true) { grpPipeSummary.Visible = false; }
 								this.Size = new Size(grpBigPicture.Width + 50, grpBigPicture.Height + 50);
 								grpBigPicture.Visible = true;
-								if (grpPipeSummary.Visible == true) { grpPipeSummary.Visible = false; }
 							}
 							catch (Exception)
 							{

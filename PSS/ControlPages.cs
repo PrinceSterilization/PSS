@@ -228,14 +228,21 @@ namespace PSS
                     nPrinted++;
                 }
             }
-
-            if (intUserID == 1021 || intUserID == 1014 || intUserID == 270 || intUserID == 482)
+            //1029  Gabrielle Mastej
+            //1021  Phyllis DeCilla
+            //1014  German Yemets
+            // 270  Michael Pannullo
+            // 482  Chad Zapata
+            // 114  Jozef Mastej
+            if (intUserID == 1029 || intUserID == 1021 || intUserID == 1014 || intUserID == 270 || intUserID == 482 || intUserID == 114)
             {
                 btnPrintTo45.Visible = true;
+                btnPrintToQA45.Visible = true;
             }
             else
             {
                 btnPrintTo45.Visible = false;
+                btnPrintToQA45.Visible = false;
             }
 
             if (nPrinted == dgvControlPageNumbers.Rows.Count)
@@ -243,7 +250,8 @@ namespace PSS
                 btnPrintTo122.Enabled = false;
                 btnPrintTo16.Enabled = false;
                 btnPrintTo45.Enabled = false;
-                btnPrintTo45.Visible = false;
+                btnPrintToQA45.Enabled = false;
+                // btnPrintTo45.Visible = false;
                 //if (btnPrintTo45.Visible == true)
                 //{
                 //    btnPrintTo45.Enabled = false;
@@ -253,10 +261,12 @@ namespace PSS
             {
                 btnPrintTo122.Enabled = true;
                 btnPrintTo16.Enabled = true;
-                if (btnPrintTo45.Visible == true)
-                {
-                    btnPrintTo45.Enabled = true;
-                }
+                btnPrintTo45.Enabled = true;
+                btnPrintToQA45.Enabled = true;
+                //if (btnPrintTo45.Visible == true)
+                //{
+                //    btnPrintTo45.Enabled = true;
+                //}
             }
 
             
@@ -990,11 +1000,13 @@ namespace PSS
             btnAddPage.Enabled = false;
             btnVoid.Enabled = false;
             btnAdmin.Enabled = false;
-            if (btnPrintTo45.Visible == true)
-            {
-                btnPrintTo45.Enabled = false;
-                btnPrintTo45.Visible = false;
-            }
+            btnPrintTo45.Enabled = false;
+            btnPrintToQA45.Enabled = false;
+            //if (btnPrintTo45.Visible == true)
+            //{
+            //    btnPrintTo45.Enabled = false;
+            //    btnPrintTo45.Visible = false;
+            //}
             dtGBLList.Rows.Clear();
             dtControlPageGBL.Rows.Clear();
             dtControlPageNumbers.Rows.Clear();        
@@ -1362,6 +1374,10 @@ namespace PSS
                         {
                             btnPrintTo45.Enabled = true;
                         }
+                        if (btnPrintToQA45.Visible == true)
+                        {
+                            btnPrintToQA45.Enabled = true;
+                        }
                     }
                     else
                     {
@@ -1508,7 +1524,8 @@ namespace PSS
         private void btnPrintTo16_Click(object sender, EventArgs e)
         {
             // This print-out is for Bldg 16, QA printer
-            strPrinterName = @"\\psapp01.corp.princesterilization.com\PSS QA";////PSSClass.QA.PrinterName(7); 
+            //strPrinterName = @"\\psapp01.corp.princesterilization.com\PSS QA";////PSSClass.QA.PrinterName(7);
+            strPrinterName = @"\\psapp01\Kyocera QA 2";////PSSClass.QA.PrinterName(7); 
             strRptName = @"\\PSAPP01\IT Files\PTS\Crystal Reports\" + "ControlPageForm_16.rpt";
             //strRptName = @"S:\IT Files\PSS\" + "ControlPageForm_16.rpt";            
             PrintReport(strPrinterName, strRptName);
@@ -1819,11 +1836,13 @@ namespace PSS
             btnPrintTo16.Enabled = false;
             btnAddPage.Enabled = false;
             btnVoid.Enabled = false;
-            if (btnPrintTo45.Visible == true)
-            {
-                btnPrintTo45.Enabled = false;
-                btnPrintTo45.Visible = false;
-            }
+            btnPrintTo45.Enabled = false;
+            btnPrintToQA45.Enabled = false;
+            //if (btnPrintTo45.Visible == true)
+            //{
+            //    btnPrintTo45.Enabled = false;
+            //    btnPrintTo45.Visible = false;
+            //}
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -1834,10 +1853,12 @@ namespace PSS
             btnPrintTo16.Enabled = true;
             btnAddPage.Enabled = true;
             btnVoid.Enabled = true;
-            if (btnPrintTo45.Visible == true)
-            {
-                btnPrintTo45.Enabled = true;
-            }
+            btnPrintTo45.Enabled = true;
+            btnPrintToQA45.Enabled = true;
+            //if (btnPrintTo45.Visible == true)
+            //{
+            //    btnPrintTo45.Enabled = true;
+            //}
             ClearControls(this.pnlAdmin);  
         }
 
@@ -2155,6 +2176,21 @@ namespace PSS
             AddEditMode(false);           
         }
 
-       
+        private void btnPrintToQA45_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // This print-out is for 45 Office
+                strPrinterName = @"\\psapp01.corp.princesterilization.com\TOSHIBA 5005ac";
+                strRptName = @"\\PSAPP01\IT Files\PTS\Crystal Reports\" + "ControlPageForm_16.rpt";
+                PrintReport(strPrinterName, strRptName);
+                btnPrintToQA45.Enabled = false;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

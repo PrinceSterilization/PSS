@@ -186,7 +186,11 @@ namespace PSS
             cboSvcCategories.SelectedValue = 1;
         }
 
-
+        private void DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            dtpDateTill.Format = DateTimePickerFormat.Custom;
+            dtpDateTill.CustomFormat = "MMM dd, yyyy";
+        }
 
 
         private void DataGridSetting()
@@ -220,6 +224,14 @@ namespace PSS
             //dgvFile.Columns["AltDesc"].HeaderText = "ALT DESCRIPTION";
             //dgvFile.Columns["USPCode"].HeaderText = "USP CODE";
             dgvFile.Columns["Category"].HeaderText = "SERVICE CATEGORY";
+
+
+            //NEW FIELDS
+            dgvFile.Columns["OldServDesc"].HeaderText = "OLD DESCRIPTION";
+            dgvFile.Columns["OldSCDescExpDate"].HeaderText = "EXPIRATION DATE";
+            //END OF NEW FIELDS
+
+
             //dgvFile.Columns["Method"].HeaderText = "METHOD";
             dgvFile.Columns["ServiceCode"].Width = 80;            
             dgvFile.Columns["ServiceDesc"].Width = 380;
@@ -237,6 +249,13 @@ namespace PSS
             //dgvFile.Columns["USPCode"].Width = 70;
             dgvFile.Columns["Category"].Width = 170;
             //dgvFile.Columns["Method"].Width = 170;
+
+
+            ////NEW FIELDS
+            dgvFile.Columns["OldServDesc"].Width = 380;
+            dgvFile.Columns["OldSCDescExpDate"].Width = 80;
+            ////END OF NEW FIELDS
+
             dgvFile.Columns["AltCode"].Visible = false;
             dgvFile.Columns["AltDesc"].Visible = false;
             dgvFile.Columns["USPCode"].Visible = false;
@@ -536,6 +555,20 @@ namespace PSS
             string strSvcCat = cboSvcCategories.SelectedValue.ToString().Trim();           
             sqlcmd.Parameters.AddWithValue("@SvcCatID", Convert.ToInt32(strSvcCat));
 
+            ////NEW CONTROLS ADD SC PREVIOUS DESCRIPTION AND DATE WHEN IT HAS BEEN CHANGED                
+            if (txtOldName.Text.Trim().Length > 0 && txtOldName.Text.Trim().Length < 150)
+            {
+                string strTemp = txtOldName.Text.Trim();
+                sqlcmd.Parameters.AddWithValue("@OldSCDesc", strTemp);
+                sqlcmd.Parameters.AddWithValue("@OldSCDescExpDate", dtpDateTill.Value);
+            }
+            else
+            {
+                sqlcmd.Parameters.AddWithValue("@OldSCDesc", DBNull.Value);
+                sqlcmd.Parameters.AddWithValue("@OldSCDescExpDate", DBNull.Value);
+            }
+            ////END NEW CONTROLS
+
             if (chkInactive.Checked == true)
                 sqlcmd.Parameters.AddWithValue("@Status", 0);
             else
@@ -633,6 +666,29 @@ namespace PSS
             pnlRecord.Visible = true; pnlRecord.BringToFront(); dgvFile.Visible = false;
             txtCode.Text = dgvFile.CurrentRow.Cells["ServiceCode"].Value.ToString();
             txtDesc.Text = dgvFile.CurrentRow.Cells["ServiceDesc"].Value.ToString();
+
+
+
+            //NEW FIELDS
+            //Uncomment next 1 line
+            txtOldName.Text = dgvFile.CurrentRow.Cells["OldServDesc"].Value.ToString();
+            
+            dtpDateTill.Format = DateTimePickerFormat.Custom;
+            if (string.IsNullOrEmpty(txtOldName.Text.Trim()))
+            {
+                dtpDateTill.CustomFormat = " ";
+            }
+            else
+            {
+                dtpDateTill.CustomFormat = "MMM dd, yyyy";
+                //Uncomment next 1 line
+                dtpDateTill.Value = Convert.ToDateTime(dgvFile.CurrentRow.Cells["OldSCDescExpDate"].Value);
+            }
+            
+            //END OF NEW FIELDS
+
+
+
             txtDuration.Text = dgvFile.CurrentRow.Cells["Duration"].Value.ToString();
             cboDepartments.Text = LoadDeptName();
             cboGLCodes.Text = dgvFile.CurrentRow.Cells["GLCode"].Value.ToString();

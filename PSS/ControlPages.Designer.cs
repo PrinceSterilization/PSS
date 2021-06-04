@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlPages));
             this.pnlRecord = new System.Windows.Forms.Panel();
+            this.btnPrintToQA45 = new System.Windows.Forms.Button();
             this.btnPrintTo45 = new System.Windows.Forms.Button();
             this.txtCmpyCode = new System.Windows.Forms.TextBox();
             this.pnlAdmin = new System.Windows.Forms.Panel();
@@ -110,6 +111,7 @@
             // 
             this.pnlRecord.BackColor = System.Drawing.Color.AliceBlue;
             this.pnlRecord.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlRecord.Controls.Add(this.btnPrintToQA45);
             this.pnlRecord.Controls.Add(this.btnPrintTo45);
             this.pnlRecord.Controls.Add(this.txtCmpyCode);
             this.pnlRecord.Controls.Add(this.pnlAdmin);
@@ -154,13 +156,24 @@
             this.pnlRecord.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlRecord_MouseMove);
             this.pnlRecord.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlRecord_MouseUp);
             // 
+            // btnPrintToQA45
+            // 
+            this.btnPrintToQA45.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintToQA45.Location = new System.Drawing.Point(215, 589);
+            this.btnPrintToQA45.Name = "btnPrintToQA45";
+            this.btnPrintToQA45.Size = new System.Drawing.Size(93, 23);
+            this.btnPrintToQA45.TabIndex = 414;
+            this.btnPrintToQA45.Text = "Print at QA 45";
+            this.btnPrintToQA45.UseVisualStyleBackColor = true;
+            this.btnPrintToQA45.Click += new System.EventHandler(this.btnPrintToQA45_Click);
+            // 
             // btnPrintTo45
             // 
             this.btnPrintTo45.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintTo45.Location = new System.Drawing.Point(239, 588);
+            this.btnPrintTo45.Location = new System.Drawing.Point(314, 589);
             this.btnPrintTo45.Name = "btnPrintTo45";
-            this.btnPrintTo45.Size = new System.Drawing.Size(135, 23);
-            this.btnPrintTo45.TabIndex = 400;
+            this.btnPrintTo45.Size = new System.Drawing.Size(127, 23);
+            this.btnPrintTo45.TabIndex = 413;
             this.btnPrintTo45.Text = "Print at Office on 45";
             this.btnPrintTo45.UseVisualStyleBackColor = true;
             this.btnPrintTo45.Click += new System.EventHandler(this.btnPrintTo45_Click);
@@ -172,7 +185,7 @@
             this.txtCmpyCode.Multiline = true;
             this.txtCmpyCode.Name = "txtCmpyCode";
             this.txtCmpyCode.Size = new System.Drawing.Size(25, 21);
-            this.txtCmpyCode.TabIndex = 399;
+            this.txtCmpyCode.TabIndex = 393;
             this.txtCmpyCode.Visible = false;
             // 
             // pnlAdmin
@@ -212,14 +225,14 @@
             this.dgvRequestors.BackgroundColor = System.Drawing.Color.White;
             this.dgvRequestors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRequestors.ColumnHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Moccasin;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRequestors.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Moccasin;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRequestors.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRequestors.Location = new System.Drawing.Point(177, 152);
             this.dgvRequestors.Name = "dgvRequestors";
             this.dgvRequestors.ReadOnly = true;
@@ -492,7 +505,7 @@
             this.btnResetPrint.Location = new System.Drawing.Point(642, 616);
             this.btnResetPrint.Name = "btnResetPrint";
             this.btnResetPrint.Size = new System.Drawing.Size(83, 23);
-            this.btnResetPrint.TabIndex = 398;
+            this.btnResetPrint.TabIndex = 392;
             this.btnResetPrint.Text = "Reset Print";
             this.btnResetPrint.UseVisualStyleBackColor = true;
             this.btnResetPrint.Visible = false;
@@ -513,9 +526,9 @@
             // btnPrintTo122
             // 
             this.btnPrintTo122.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintTo122.Location = new System.Drawing.Point(380, 588);
+            this.btnPrintTo122.Location = new System.Drawing.Point(447, 589);
             this.btnPrintTo122.Name = "btnPrintTo122";
-            this.btnPrintTo122.Size = new System.Drawing.Size(133, 23);
+            this.btnPrintTo122.Size = new System.Drawing.Size(126, 23);
             this.btnPrintTo122.TabIndex = 396;
             this.btnPrintTo122.Text = "Print to Sterilization";
             this.btnPrintTo122.UseVisualStyleBackColor = true;
@@ -692,9 +705,9 @@
             // txtPagesToAdd
             // 
             this.txtPagesToAdd.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPagesToAdd.Location = new System.Drawing.Point(171, 589);
+            this.txtPagesToAdd.Location = new System.Drawing.Point(174, 589);
             this.txtPagesToAdd.Name = "txtPagesToAdd";
-            this.txtPagesToAdd.Size = new System.Drawing.Size(46, 21);
+            this.txtPagesToAdd.Size = new System.Drawing.Size(35, 21);
             this.txtPagesToAdd.TabIndex = 5;
             this.txtPagesToAdd.Text = "1";
             this.txtPagesToAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -704,9 +717,9 @@
             // 
             this.btnVoid.Enabled = false;
             this.btnVoid.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoid.Location = new System.Drawing.Point(733, 589);
+            this.btnVoid.Location = new System.Drawing.Point(761, 589);
             this.btnVoid.Name = "btnVoid";
-            this.btnVoid.Size = new System.Drawing.Size(69, 23);
+            this.btnVoid.Size = new System.Drawing.Size(39, 23);
             this.btnVoid.TabIndex = 8;
             this.btnVoid.Text = "Void";
             this.btnVoid.UseVisualStyleBackColor = true;
@@ -715,9 +728,9 @@
             // btnPrintTo16
             // 
             this.btnPrintTo16.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintTo16.Location = new System.Drawing.Point(519, 589);
+            this.btnPrintTo16.Location = new System.Drawing.Point(579, 589);
             this.btnPrintTo16.Name = "btnPrintTo16";
-            this.btnPrintTo16.Size = new System.Drawing.Size(133, 23);
+            this.btnPrintTo16.Size = new System.Drawing.Size(101, 23);
             this.btnPrintTo16.TabIndex = 6;
             this.btnPrintTo16.Text = "Print to Bldg 16";
             this.btnPrintTo16.UseVisualStyleBackColor = true;
@@ -726,7 +739,7 @@
             // btnAddPage
             // 
             this.btnAddPage.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPage.Location = new System.Drawing.Point(658, 589);
+            this.btnAddPage.Location = new System.Drawing.Point(686, 589);
             this.btnAddPage.Name = "btnAddPage";
             this.btnAddPage.Size = new System.Drawing.Size(69, 23);
             this.btnAddPage.TabIndex = 7;
@@ -792,7 +805,7 @@
             this.cboBookNo.Location = new System.Drawing.Point(122, 39);
             this.cboBookNo.Name = "cboBookNo";
             this.cboBookNo.Size = new System.Drawing.Size(86, 23);
-            this.cboBookNo.TabIndex = 0;
+            this.cboBookNo.TabIndex = 9;
             this.cboBookNo.SelectedValueChanged += new System.EventHandler(this.cboBookNo_SelectedValueChanged);
             this.cboBookNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboBookNo_KeyPress);
             // 
@@ -844,7 +857,7 @@
             this.lblHeader.Location = new System.Drawing.Point(-2, 0);
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Size = new System.Drawing.Size(837, 21);
-            this.lblHeader.TabIndex = 0;
+            this.lblHeader.TabIndex = 10;
             this.lblHeader.Text = "CONTROL PAGE MASTER";
             this.lblHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblHeader_MouseDown);
@@ -974,5 +987,6 @@
         private System.Windows.Forms.Button btnResetPrint;
         private System.Windows.Forms.TextBox txtCmpyCode;
         private System.Windows.Forms.Button btnPrintTo45;
+        private System.Windows.Forms.Button btnPrintToQA45;
     }
 }
