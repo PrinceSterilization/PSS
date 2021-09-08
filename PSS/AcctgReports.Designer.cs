@@ -1,4 +1,6 @@
-﻿namespace PSS
+﻿using System.Windows.Forms;
+
+namespace PSS
 {
     partial class AcctgReports
     {
@@ -1024,6 +1026,7 @@
             this.cmbPOStatus.Size = new System.Drawing.Size(146, 25);
             this.cmbPOStatus.TabIndex = 439;
             this.cmbPOStatus.Text = "Select PO Status";
+            this.cmbPOStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             this.cmbPOStatus.SelectedIndexChanged += new System.EventHandler(this.cmbPOStatus_SelectedIndexChanged);
             // 
             // label5

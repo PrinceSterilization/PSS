@@ -994,7 +994,11 @@ namespace PSS
             if (sqldr.HasRows)
             {
                 sqldr.Read();
-                txtCC.Text = sqldr.GetValue(0).ToString();
+                //08/03/21 German Yemets 
+                //Per Request from Derek and Kristah switching from CC to BSS 
+                //txtCC.Text = sqldr.GetValue(0).ToString();
+                txtCC.Text = "";
+                txtBCC.Text = sqldr.GetValue(0).ToString();
             }
             else
             {

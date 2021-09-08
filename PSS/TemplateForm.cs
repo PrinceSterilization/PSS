@@ -42,7 +42,7 @@ namespace PSS
         private void tsbSearch_Click(object sender, EventArgs e)
         {
         }
-
+      
         public void AddEditMode(bool bState)
         {
             tlsFile.TabStop = !bState;
@@ -119,6 +119,12 @@ namespace PSS
 
                     case "GISControls.TextBoxChar": //User Control
                         ((GISControls.TextBoxChar)Ctrl).ReadOnly = !b;
+                        if (((GISControls.TextBoxChar)Ctrl).Name == "txtPONo")
+                        {
+                            string strText=((GISControls.TextBoxChar)Ctrl).Text.ToString();
+                            ((GISControls.TextBoxChar)Ctrl).ReadOnly = b;
+                        }
+                       
                         break;
 
                     case "GISControls.TextBoxAdjHt": //User Control

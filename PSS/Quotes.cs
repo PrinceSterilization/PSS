@@ -1099,7 +1099,7 @@ namespace PSS
                 if (strSkit == "0")
                     txtBody.Text = "Dear " + strCFName + "," + Environment.NewLine + Environment.NewLine +
                         "I have attached our quote " + txtCmpyCode.Text.Trim().Trim() + txtQuoteNo.Text + ".R" + txtRevNo.Text + " for your review. Please check to see if it accurately reflects your order." +
-                        Environment.NewLine + "If so, please sign the quote and email (preferred) or fax it to my attention: (973) 227-0812. If not, please let us know " +
+                        Environment.NewLine + "If so, please sign the quote and email it to my attention. If not, please let us know " +
                         Environment.NewLine + "what corrections you have." +Environment.NewLine + Environment.NewLine +
                          "Testing cannot begin unless all of the paperwork (Purchase Order, Quote) is signed and returned to us. Please return " +
                         Environment.NewLine + "the signed documents to my attention." + Environment.NewLine + Environment.NewLine + "Terms Policy is available at " +
@@ -1108,7 +1108,7 @@ namespace PSS
                 else if (strSkit == "1")
                     txtBody.Text = "Dear " + strCFName + "," + Environment.NewLine + Environment.NewLine +
                         "I have attached our quote " + txtCmpyCode.Text.Trim().Trim() + txtQuoteNo.Text + ".R" + txtRevNo.Text + " for your review. Please check to see if it accurately reflects your order." +
-                        Environment.NewLine + "If so, please sign the quote and email (preferred) or fax it to my attention: (973) 227-0812. " + 
+                        Environment.NewLine + "If so, please sign the quote and email it to my attention. " + 
                         "If not, please let us know " +
                         Environment.NewLine + "what corrections you have." + Environment.NewLine + Environment.NewLine + 
                         "Processing of your order will not begin unless all of the paperwork (Purchase Order, Quote) is signed and returned" +
@@ -1118,7 +1118,7 @@ namespace PSS
                 else if (strSkit == "2")
                     txtBody.Text = "Dear " + strCFName + "," + Environment.NewLine + Environment.NewLine +
                         "I have attached our quote " + txtCmpyCode.Text.Trim().Trim() + txtQuoteNo.Text + ".R" + txtRevNo.Text + " for your review. Please check to see if it accurately reflects your order." +
-                        Environment.NewLine + "If so, please sign the quote and email (preferred) or fax it to my attention: (973) 227-0812. If not, please let us know " +
+                        Environment.NewLine + "If so, please sign the quote and email it to my attention. If not, please let us know " +
                         Environment.NewLine + "what corrections you have." + Environment.NewLine + Environment.NewLine +
                         "Processing of your order will not begin unless all of the paperwork (Purchase Order, Quote) is signed and returned to us." +
                         Environment.NewLine + "Please return the signed documents to my attention." + Environment.NewLine + Environment.NewLine + "Terms Policy is available at " +
@@ -1128,7 +1128,7 @@ namespace PSS
                 else if (strSkit == "3")
                     txtBody.Text = "Dear " + strCFName + "," + Environment.NewLine + Environment.NewLine +
                          "I have attached our quote " + txtCmpyCode.Text.Trim().Trim() + txtQuoteNo.Text + ".R" + txtRevNo.Text + " for your review. Please check to see if it accurately reflects the services" +
-                         Environment.NewLine + "that you are requesting. If so, please sign the quote and email (preferred) or fax it to my attention: (973) 227-0812." +
+                         Environment.NewLine + "that you are requesting. If so, please sign the quote and email it to my attention." +
                          Environment.NewLine + "If not, please let us know what corrections you have." + 
                          Environment.NewLine + Environment.NewLine +
                          "Testing cannot begin unless all of the paperwork (Purchase Order, Quote) is signed and returned to us. Please return " + 
@@ -1144,8 +1144,8 @@ namespace PSS
             {
                 txtBody.Text = "Dear " + strCFName + "," + Environment.NewLine + Environment.NewLine +
                                "I am following up on the attached quote you requested (" + txtCmpyCode.Text.Trim().Trim() + txtQuoteNo.Text + ".R" + txtRevNo.Text + ") - any news on whether you will be sending " +
-                               "this work or order to us? " + Environment.NewLine + Environment.NewLine + "Our records indicate that we do not have a signed copy of the quote for our files. At your convenience, please e-mail (preferred) or " +
-                               Environment.NewLine + "fax a signed copy to my attention:(973) 227-0812. If you have elected not to send us the work, we value any input as to why and " + 
+                               "this work or order to us? " + Environment.NewLine + Environment.NewLine + "Our records indicate that we do not have a signed copy of the quote for our files. At your convenience, please e-mail " +
+                               Environment.NewLine + " signed copy to my attention. If you have elected not to send us the work, we value any input as to why and " + 
                                Environment.NewLine + "ask if you could please let us know by checking off  one of the below:" + Environment.NewLine + Environment.NewLine +
                                "[  ] price not competitive  [  ] facility too far away  [  ] work not necessary anymore  [  ] Other: ______________________________";
             }

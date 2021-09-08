@@ -1113,19 +1113,22 @@ namespace PSS
             sqlcmd.Parameters.AddWithValue("@UserID", LogIn.nUserID);
 
             sqlcmd.CommandType = CommandType.StoredProcedure;
-            //try
-            //{
+            try
+            {
                 sqlcmd.CommandText = "spAddEditEmployment";
                 sqlcmd.ExecuteNonQuery();
-            //}
-            //catch (Exception ex)
-            //{
-            //    sqlcmd.Dispose(); sqlcnn.Dispose();
-            //    MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //    return;
-            //}
-            sqlcmd.Dispose();
-            sqlcnn.Close(); sqlcnn.Dispose();
+            }
+            catch (Exception ex)
+            {
+                //sqlcmd.Dispose(); sqlcnn.Dispose();
+                MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            finally {
+                sqlcmd.Dispose();
+                sqlcnn.Close(); sqlcnn.Dispose();
+            }
+            
         }
 
         private void SaveOtherData()

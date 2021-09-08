@@ -1469,7 +1469,7 @@ namespace PSS
                 MessageBox.Show("Connection problems encountered." + Environment.NewLine + "Please contact your administrator.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-
+            
             ReportDocument crDoc = new ReportDocument();
             SqlCommand sqlcmd = new SqlCommand();
             SqlDataReader sqldr;            
@@ -1509,6 +1509,10 @@ namespace PSS
                 MessageBox.Show("Error encountered: " + ex.Message + Environment.NewLine + "Please contact your Software Developer.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            finally 
+            {
+                crDoc.Dispose();
+            }     
 
             nMode = 0;
             UpdateControlPageSelected(1, 1);                                                                      // partial loop and selector will be checked
@@ -1518,7 +1522,7 @@ namespace PSS
             txtPagesToAdd.Text = "";
             LoadControlPageNumbers(Convert.ToInt64(txtControlPageID.Text));
             cboBookNo.Enabled = false;
-            crDoc.Dispose();
+            
         }
 
         private void btnPrintTo16_Click(object sender, EventArgs e)
@@ -1529,7 +1533,10 @@ namespace PSS
             strRptName = @"\\PSAPP01\IT Files\PTS\Crystal Reports\" + "ControlPageForm_16.rpt";
             //strRptName = @"S:\IT Files\PSS\" + "ControlPageForm_16.rpt";            
             PrintReport(strPrinterName, strRptName);
+            btnPrintTo45.Enabled = false;
+            btnPrintTo122.Enabled = false;
             btnPrintTo16.Enabled = false;
+            btnPrintToQA45.Enabled = false;
         }
 
         private void btnPrintTo122_Click(object sender, EventArgs e)
@@ -1538,7 +1545,10 @@ namespace PSS
             strPrinterName = @"\\psapp01.corp.princesterilization.com\Sterilization Kyocera";////PSSClass.QA.PrinterName(7); 
             strRptName = @"\\PSAPP01\IT Files\PTS\Crystal Reports\" + "ControlPageForm_16.rpt";
             PrintReport(strPrinterName, strRptName);
+            btnPrintTo45.Enabled = false;
             btnPrintTo122.Enabled = false;
+            btnPrintTo16.Enabled = false;
+            btnPrintToQA45.Enabled = false;
 
         }
         //private void PrintReport1(string cPrinterName, string cRptName)
@@ -1608,10 +1618,15 @@ namespace PSS
             try
             {
                 // This print-out is for 45 Office
-                strPrinterName = @"\\psapp04.corp.princesterilization.com\45 Office C3320i";
+                //strPrinterName = @"\\psapp04.corp.princesterilization.com\45 Office C3320i";
+                strPrinterName = @"\\psapp01\45 Office Printer";
+                //strPrinterName = @"\\psapp01\Toshiba 5005ac";
                 strRptName = @"\\PSAPP01\IT Files\PTS\Crystal Reports\" + "ControlPageForm_16.rpt";
                 PrintReport(strPrinterName, strRptName);
                 btnPrintTo45.Enabled = false;
+                btnPrintTo122.Enabled = false;
+                btnPrintTo16.Enabled = false;
+                btnPrintToQA45.Enabled = false;
             }
             catch (Exception)
             {
@@ -2181,9 +2196,12 @@ namespace PSS
             try
             {
                 // This print-out is for 45 Office
-                strPrinterName = @"\\psapp01.corp.princesterilization.com\TOSHIBA 5005ac";
+                strPrinterName = @"\\psapp04\QA Printer";
                 strRptName = @"\\PSAPP01\IT Files\PTS\Crystal Reports\" + "ControlPageForm_16.rpt";
                 PrintReport(strPrinterName, strRptName);
+                btnPrintTo45.Enabled = false;
+                btnPrintTo122.Enabled = false;
+                btnPrintTo16.Enabled = false;
                 btnPrintToQA45.Enabled = false;
             }
             catch (Exception)

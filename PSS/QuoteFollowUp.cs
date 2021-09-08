@@ -603,8 +603,8 @@ namespace PSS
 
                 String Body1 = "Dear " + cContact + "," + Environment.NewLine + Environment.NewLine +
                                "I am following up on the attached quote you requested (" + cRefNo + ") - any news on whether you will be sending this work or order to us? " + Environment.NewLine + 
-                               "Our records indicate that we do not have a signed copy of the quote for our files. At your convenience, please e-mail (preferred) or " + Environment.NewLine +
-                               "fax a signed copy to my attention: (973) 882-9520." + Environment.NewLine + Environment.NewLine;
+                               "Our records indicate that we do not have a signed copy of the quote for our files. At your convenience, please e-mail  " + Environment.NewLine +
+                               "a signed copy to my attention." + Environment.NewLine + Environment.NewLine;
                 String Body2 = "If you have elected not to send us the work, we value any input as to why and ask if you could please let us know by checking off one " + Environment.NewLine + 
                                "of the below:" + Environment.NewLine + Environment.NewLine;
                 String Body3 = "[ ] price not competitive"  + Environment.NewLine + 

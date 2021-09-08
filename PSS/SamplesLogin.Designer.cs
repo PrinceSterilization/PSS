@@ -2475,7 +2475,7 @@
             // 
             this.dtrLogTests.AllowUserToAddItems = false;
             this.dtrLogTests.AllowUserToDeleteItems = false;
-            this.dtrLogTests.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dtrLogTests.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtrLogTests.BackColor = System.Drawing.SystemColors.ButtonFace;
             // 
@@ -3423,7 +3423,7 @@
             this.grpReceived.Controls.Add(this.rdoDryIce);
             this.grpReceived.Controls.Add(this.rdoIcePack);
             this.grpReceived.Controls.Add(this.rdoRAmbient);
-            this.grpReceived.Font = new System.Drawing.Font("Arial", 9F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+            this.grpReceived.Font = new System.Drawing.Font("Arial", 9F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpReceived.ForeColor = System.Drawing.Color.Maroon;
             this.grpReceived.Location = new System.Drawing.Point(770, 185);
@@ -3495,7 +3495,7 @@
             this.grpStorage.Controls.Add(this.rdoFreezer20);
             this.grpStorage.Controls.Add(this.rdoRefrigerator);
             this.grpStorage.Controls.Add(this.rdoSAmbient);
-            this.grpStorage.Font = new System.Drawing.Font("Arial", 9F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+            this.grpStorage.Font = new System.Drawing.Font("Arial", 9F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpStorage.ForeColor = System.Drawing.Color.Maroon;
             this.grpStorage.Location = new System.Drawing.Point(771, 17);
@@ -3528,7 +3528,7 @@
             // rdoOther
             // 
             this.rdoOther.AutoSize = true;
-            this.rdoOther.Font = new System.Drawing.Font("Arial", 9F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+            this.rdoOther.Font = new System.Drawing.Font("Arial", 9F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoOther.ForeColor = System.Drawing.Color.Black;
             this.rdoOther.Location = new System.Drawing.Point(18, 102);

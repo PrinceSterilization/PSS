@@ -133,7 +133,8 @@ namespace PSS
             //txtContact.GotFocus += new EventHandler(txtContactEnterHandler);
             //txtSponsorID.GotFocus += new EventHandler(txtSponsorIDEnterHandler);
             //txtContactID.GotFocus += new EventHandler(txtContactIDEnterHandler);
-            txtPONo.KeyPress += new KeyPressEventHandler(txtPONoKeyPressHandler);
+            //txtPONo.KeyPress += new KeyPressEventHandler(txtPONoKeyPressHandler);
+            txtPONo.ReadOnly = true;
             dgvPONo.LostFocus += new EventHandler(dgvPONoOnLeave);
             lblLoadStatus.Visible = true; timer1.Enabled = true;
             lblLoadStatus.Text = "Retrieving records from database...please standby!";// +nCtr.ToString() + " second(s) elapsed.";
@@ -1276,7 +1277,7 @@ namespace PSS
                 LoadData(); btnClose.Visible = true; 
             }
         }
-
+        
         private void LoadData()
         {
             //ClearControls(this.pnlRecord);
@@ -4552,9 +4553,15 @@ namespace PSS
         }
 
         private void dgvPONo_DoubleClick(object sender, EventArgs e)
-        {
-            ((GISControls.TextBoxChar)dtrLogTests.CurrentItem.Controls["txtPONo"]).Text = ((DataGridView)dtrLogTests.CurrentItem.Controls["dgvPONo"]).CurrentRow.Cells[0].Value.ToString();
-            ((DataGridView)dtrLogTests.CurrentItem.Controls["dgvPONo"]).Visible = false; 
+        {    
+            DataGridView mydgv = (DataGridView)dtrLogTests.CurrentItem.Controls["dgvPONo"];
+            int i = mydgv.Rows.Count;
+            if (i>0)
+            {
+                ((GISControls.TextBoxChar)dtrLogTests.CurrentItem.Controls["txtPONo"]).Text = ((DataGridView)dtrLogTests.CurrentItem.Controls["dgvPONo"]).CurrentRow.Cells[0].Value.ToString();
+                ((GISControls.TextBoxChar)dtrLogTests.CurrentItem.Controls["txtPONo"]).ReadOnly = true;                
+            }
+            ((DataGridView)dtrLogTests.CurrentItem.Controls["dgvPONo"]).Visible = false;           
         }
 
         private void dgvPONo_KeyDown(object sender, KeyEventArgs e)
@@ -4567,8 +4574,14 @@ namespace PSS
         {
             if (e.KeyChar == 13)
             {
-                ((GISControls.TextBoxChar)dtrLogTests.CurrentItem.Controls["txtPONo"]).Text = ((DataGridView)dtrLogTests.CurrentItem.Controls["dgvPONo"]).CurrentRow.Cells[0].Value.ToString();
-                ((DataGridView)dtrLogTests.CurrentItem.Controls["dgvPONo"]).Visible = false; 
+                DataGridView mydgv = (DataGridView)dtrLogTests.CurrentItem.Controls["dgvPONo"];
+                int i = mydgv.Rows.Count;
+                if (i > 0)
+                {
+                    ((GISControls.TextBoxChar)dtrLogTests.CurrentItem.Controls["txtPONo"]).Text = ((DataGridView)dtrLogTests.CurrentItem.Controls["dgvPONo"]).CurrentRow.Cells[0].Value.ToString();
+                    ((GISControls.TextBoxChar)dtrLogTests.CurrentItem.Controls["txtPONo"]).ReadOnly = true;
+                }
+            ((DataGridView)dtrLogTests.CurrentItem.Controls["dgvPONo"]).Visible = false;
             }
             else if (e.KeyChar == 27)
             {
@@ -4578,7 +4591,7 @@ namespace PSS
 
         private void txtPONoKeyPressHandler(object sender, KeyPressEventArgs e)
         {
-            //e.Handled = true;
+            //e.Handled = true;            
         }
 
         private void dgvPONoOnLeave(object sender, EventArgs e)
@@ -5398,7 +5411,7 @@ namespace PSS
                     case "txtPONo":
                         try
                         {
-                            e.Value = dtLogTests.Rows[e.ItemIndex]["PONo"];
+                            e.Value = dtLogTests.Rows[e.ItemIndex]["PONo"];                            
                         }
                         catch { }
                         break;

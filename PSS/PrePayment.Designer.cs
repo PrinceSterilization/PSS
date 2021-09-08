@@ -805,7 +805,7 @@
             this.pnlEMail.Controls.Add(this.btnCancelSend);
             this.pnlEMail.Location = new System.Drawing.Point(165, 75);
             this.pnlEMail.Name = "pnlEMail";
-            this.pnlEMail.Size = new System.Drawing.Size(527, 394);
+            this.pnlEMail.Size = new System.Drawing.Size(527, 403);
             this.pnlEMail.TabIndex = 402;
             this.pnlEMail.Visible = false;
             // 
@@ -815,28 +815,26 @@
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Image = ((System.Drawing.Image)(resources.GetObject("label12.Image")));
             this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label12.Location = new System.Drawing.Point(34, 212);
+            this.label12.Location = new System.Drawing.Point(23, 92);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(61, 18);
             this.label12.TabIndex = 410;
             this.label12.Text = "BCC :";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label12.Visible = false;
             // 
             // txtBCC
             // 
             this.txtBCC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBCC.Location = new System.Drawing.Point(101, 212);
+            this.txtBCC.Location = new System.Drawing.Point(101, 91);
             this.txtBCC.Name = "txtBCC";
             this.txtBCC.Size = new System.Drawing.Size(400, 21);
             this.txtBCC.TabIndex = 2;
-            this.txtBCC.Visible = false;
             // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.AliceBlue;
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAdd.Location = new System.Drawing.Point(381, 222);
+            this.btnAdd.Location = new System.Drawing.Point(381, 240);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(59, 23);
             this.btnAdd.TabIndex = 5;
@@ -850,7 +848,7 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.AliceBlue;
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnDelete.Location = new System.Drawing.Point(443, 222);
+            this.btnDelete.Location = new System.Drawing.Point(443, 240);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(59, 23);
             this.btnDelete.TabIndex = 6;
@@ -864,7 +862,7 @@
             // 
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(24, 265);
+            this.label16.Location = new System.Drawing.Point(24, 286);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(71, 41);
             this.label16.TabIndex = 406;
@@ -875,7 +873,7 @@
             // 
             this.lstAttachment.FormattingEnabled = true;
             this.lstAttachment.ItemHeight = 15;
-            this.lstAttachment.Location = new System.Drawing.Point(101, 248);
+            this.lstAttachment.Location = new System.Drawing.Point(101, 269);
             this.lstAttachment.Name = "lstAttachment";
             this.lstAttachment.Size = new System.Drawing.Size(400, 64);
             this.lstAttachment.TabIndex = 7;
@@ -883,7 +881,7 @@
             // lnkInvoice
             // 
             this.lnkInvoice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lnkInvoice.Location = new System.Drawing.Point(101, 318);
+            this.lnkInvoice.Location = new System.Drawing.Point(101, 339);
             this.lnkInvoice.Name = "lnkInvoice";
             this.lnkInvoice.Size = new System.Drawing.Size(400, 18);
             this.lnkInvoice.TabIndex = 404;
@@ -895,7 +893,7 @@
             // 
             this.label36.BackColor = System.Drawing.Color.Transparent;
             this.label36.ForeColor = System.Drawing.Color.Black;
-            this.label36.Location = new System.Drawing.Point(23, 247);
+            this.label36.Location = new System.Drawing.Point(23, 268);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(78, 18);
             this.label36.TabIndex = 403;
@@ -905,7 +903,7 @@
             // 
             this.label34.BackColor = System.Drawing.Color.Transparent;
             this.label34.ForeColor = System.Drawing.Color.Black;
-            this.label34.Location = new System.Drawing.Point(23, 120);
+            this.label34.Location = new System.Drawing.Point(23, 142);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(55, 18);
             this.label34.TabIndex = 401;
@@ -915,7 +913,7 @@
             // 
             this.label31.BackColor = System.Drawing.Color.Transparent;
             this.label31.ForeColor = System.Drawing.Color.Black;
-            this.label31.Location = new System.Drawing.Point(23, 98);
+            this.label31.Location = new System.Drawing.Point(23, 118);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(55, 18);
             this.label31.TabIndex = 400;
@@ -924,7 +922,7 @@
             // txtSubject
             // 
             this.txtSubject.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSubject.Location = new System.Drawing.Point(101, 93);
+            this.txtSubject.Location = new System.Drawing.Point(101, 115);
             this.txtSubject.Name = "txtSubject";
             this.txtSubject.Size = new System.Drawing.Size(400, 21);
             this.txtSubject.TabIndex = 3;
@@ -974,7 +972,7 @@
             // txtBody
             // 
             this.txtBody.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBody.Location = new System.Drawing.Point(101, 118);
+            this.txtBody.Location = new System.Drawing.Point(101, 140);
             this.txtBody.Multiline = true;
             this.txtBody.Name = "txtBody";
             this.txtBody.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -985,7 +983,7 @@
             // 
             this.btnSendEMail.BackColor = System.Drawing.Color.AliceBlue;
             this.btnSendEMail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSendEMail.Location = new System.Drawing.Point(357, 344);
+            this.btnSendEMail.Location = new System.Drawing.Point(357, 363);
             this.btnSendEMail.Name = "btnSendEMail";
             this.btnSendEMail.Size = new System.Drawing.Size(69, 25);
             this.btnSendEMail.TabIndex = 8;
@@ -1011,7 +1009,7 @@
             // 
             this.btnCancelSend.BackColor = System.Drawing.Color.AliceBlue;
             this.btnCancelSend.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnCancelSend.Location = new System.Drawing.Point(432, 344);
+            this.btnCancelSend.Location = new System.Drawing.Point(432, 363);
             this.btnCancelSend.Name = "btnCancelSend";
             this.btnCancelSend.Size = new System.Drawing.Size(69, 25);
             this.btnCancelSend.TabIndex = 9;
@@ -1027,7 +1025,7 @@
             // PrePayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.ClientSize = new System.Drawing.Size(1187, 674);
+            this.ClientSize = new System.Drawing.Size(1187, 691);
             this.Controls.Add(this.pnlEMail);
             this.Controls.Add(this.pnlRecord);
             this.Location = new System.Drawing.Point(0, 0);
